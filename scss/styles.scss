@@ -1,0 +1,138 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import
+	//import variables
+	"variables";
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	height:100%;
+	min-height:100%;
+}
+
+body {
+	min-height:100%;
+	-webkit-font-smoothing: antialiased;
+	color: $black;
+	font: {
+		family: $fonts;
+		size: 14px;
+	}
+	line-height: 150%;
+	&.page-landing {
+		overflow-x: hidden;
+	}
+}
+
+@import "elements/inc"; 
+
+.main-container {
+	@include grid-row(false);
+	margin: {
+		top: 0;
+		bottom: 1.25em;
+	}
+	padding: 10px 0 45px 0;
+	width: 100%;
+	max-width: 100%;
+	min-height: 450px;
+	background-color: $cloud;
+	@media #{$large-up} {
+		padding-top: 64px;
+	}
+}
+#main_inner {
+	@include grid-row();
+	padding: {
+		left:.9375em;
+		right:.9375em;
+	}
+	@media #{$large-up} {
+		padding: 0;
+	}
+}
+
+
+
+@include headings {
+	font-weight: normal;
+	@include grid-column($columns: 12, $collapse: true);
+	margin: em-calc(24px) 0 em-calc(12px);
+	line-height: 1.2em;
+	color: $black;
+}
+
+h1 {
+	margin: 12px 0;
+	@include grid-column($collapse:false);
+	& + h2 {
+		margin-top: em-calc(12px);
+		& + h3 {
+			margin-top: 0;
+		}
+	}
+}
+
+noscript {
+	@include grid-column(12);
+	font-size: em-calc(20px);
+	text-align:center;
+	padding: em-calc(25px) 0;
+	background-color: lighten(desaturate(#f00, 30%), 15%);
+}
+
+article {
+	@include grid-column($columns:12, $collapse:false);
+	a {
+		-ms-word-break: break-all;
+		word-break: break-all;
+
+		/* Non standard for webkit */
+		word-break: break-word;
+
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+	}
+	p {
+		text-align:left;
+	}
+}
+
+fieldset {
+	margin-left: 0;
+}
+
+ul, ol {
+	height:auto;
+	clear:left;
+	li {
+		margin-bottom: em-calc(6px);
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $blue;
+}
+
+p {
+	@include grid-column($columns: 12, $collapse: true);
+	a {	
+		border-bottom:1px solid;
+		&:visited {
+			color: change-color( $blue, $red:100 );
+		}
+		&:hover {
+			border-bottom:1px dotted;
+		}
+	}
+}
