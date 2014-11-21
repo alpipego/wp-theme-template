@@ -1,18 +1,5 @@
 @mixin heading-box {
 	@include grid-column(12);
-	font: {
-		size: 1.143em;
-		weight: normal;
-	}
-	color: #fff;
-	margin: 0 0 10px 0;	
-	min-height: 45px;
-	text-align: center;
-	padding: {
-		top: .8em;
-		bottom: .8em;
-	}
-	background-color: $blue;
 }
 
 @mixin headings {

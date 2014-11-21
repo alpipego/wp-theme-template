@@ -1,3 +1,7 @@
+<?php
+    $path = new \Theme\Functions\Path();
+
+?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
@@ -8,17 +12,12 @@
 	<title><?php bloginfo( 'name' ); ?></title>
 
 	
-	<link rel="icon" href="<?php pi_path( 'img' ); ?>favicon.ico" type="">
-	<link rel="shortcut icon" href="<?php  pi_path( 'img' ); ?>favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="<?php $path->template(); ?>favicon.ico" type="">
+	<link rel="shortcut icon" href="<?php  $path->template(); ?>favicon.ico" type="image/x-icon" />
 
-
-	<?php if( is_user_logged_in() ) : ?>
-		<style>
-			.main-container {display:none;}
-		</style>
-	<?php endif; ?>
-	<link rel="stylesheet" href="<?php pi_path( 'css' ); ?>normalize.css" />
-	<link rel="stylesheet" href="<?php pi_path( 'css' ); ?>styles.css" />
+    <?php // styles either here or the proper way via wp_enqueue_styles in functions.php ?>
+	<link rel="stylesheet" href="<?= $path->template(); ?>normalize.css" />
+	<link rel="stylesheet" href="<?php $path->template(); ?>styles.css" />
 	<?php wp_head(); ?>
 	<script>
 		var $ = jQuery.noConflict();
@@ -39,3 +38,4 @@
 
 	<div id="main" class="main">	
 		<div class="main-inner">
+        <?= __NAMESPACE__; ?>

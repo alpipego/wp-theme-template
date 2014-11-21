@@ -1,0 +1,28 @@
+@import
+	//import variables
+	"variables",
+
+    // import mixins
+    "mixins/mixins",
+
+    //import third party
+    "foundation",
+    "bourbon/bourbon.scss";
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	height:100%;
+	min-height:100%;
+}
+
+body {
+	min-height:100%;
+	// -webkit-font-smoothing: antialiased;
+}
+
+@import "elements/inc"; 
