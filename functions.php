@@ -6,7 +6,7 @@
     add_action( 'after_setup_theme', __NAMESPACE__ . '\\l18n' );
 
     function l18n(){
-        \load_theme_textdomain( get_path() . 'languages/' );
+        \load_theme_textdomain( Path::languages() );
     }
 
 
@@ -190,74 +190,6 @@
 
     //     echo $string;
     // }	
-
-/*
- * these work pretty good in the setup in which they were built and pretty shitty in every other setup
- * have to be heavily customized to get it working probably
- * very ungeneric
- */
-
-    // CREATE ASSET FOLDERS OUTSIDE OF ACTUAL THEME
-    function get_template_directory_uri() {
-    	$wpurl = trailingslashit( get_bloginfo( 'wpurl' ) );
-    	return $wpurl;
-    }
-
-    // echo the url
-    function path( $asset = '' ) {
-    	$wpurl = \get_template_directory_uri();
-    	switch ( $asset ) {
-    		case 'images':
-    			echo trailingslashit( $wpurl . 'assets/' . 'images' );
-    			break;
-    		case 'img':
-    			echo trailingslashit( $wpurl . 'assets/' . 'images' );
-    			break;
-    		case 'css':
-    			echo trailingslashit( $wpurl . 'assets/' . 'styles' );
-    			break;
-    		case 'styles':
-    			echo trailingslashit( $wpurl . 'assets/' . 'styles' );
-    			break;
-    		case 'js':
-    			echo trailingslashit( $wpurl . 'assets/' . 'js' );
-    			break;
-    		case 'theme':
-    			echo trailingslashit( $wpurl . 'assets/themes/' . __NAMESPACE__ );
-    			break;
-    		case '' :
-    			echo trailingslashit( $wpurl . 'assets/' );
-    			break;
-    	}
-    }
-
-    //return the url
-    function get_path( $asset = '' ) {
-    	$wpurl = get_template_directory_uri();
-    	switch ( $asset ) {
-    		case 'images':
-    			return trailingslashit( $wpurl . 'assets/' . 'images' );
-    			break;
-    		case 'img':
-    			return trailingslashit( $wpurl . 'assets/' . 'images' );
-    			break;
-    		case 'css':
-    			return trailingslashit( $wpurl . 'assets/' . 'styles' );
-    			break;
-    		case 'styles':
-    			return trailingslashit( $wpurl . 'assets/' . 'styles' );
-    			break;
-    		case 'js':
-    			return trailingslashit( $wpurl . 'assets/' . 'js' );
-    			break;
-    		case 'theme':
-    			return trailingslashit( $wpurl . 'assets/themes/' . __NAMESPACE__ );
-    			break;	
-    		case '' :
-    			return trailingslashit( $wpurl . 'assets/' );
-    			break;
-    	}
-    }
 
     // function get_wp_load_path() {
     // 	$path = dirname( __FILE__ );

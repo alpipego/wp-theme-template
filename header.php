@@ -1,12 +1,6 @@
 <?php
     $path = new \Theme\Functions\Path();
-    // echo '<code><pre>';
-    //     var_dump($path->parentTheme());
-    // echo '</pre></code>';
 
-    echo '<code><pre>';
-        var_dump(\Theme\Functions\Path::js());
-    echo '</pre></code>';
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->

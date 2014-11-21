@@ -55,4 +55,13 @@
                 return self::urlWithoutProtocol(\constant('\WP_CONTENT_URL') . '/img/');
             }
         }
+
+        static function languages()
+        {
+            if (self::assets() === 'wp_content') {
+                return \trailingslashit(self::theme() . 'languages');
+            } else {
+                return self::urlWithoutProtocol(\constant('\WP_CONTENT_URL') . '/lang/');
+            }
+        }
     }
