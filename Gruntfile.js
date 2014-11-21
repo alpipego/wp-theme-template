@@ -5,7 +5,8 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          outputStyle: 'expanded'
+          outputStyle: 'expanded',
+          includePaths: require('node-bourbon').includePaths,
         },
         files: {
           'css/app.css': 'scss/app.scss',
@@ -15,7 +16,8 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          outputStyle: 'compress'
+          outputStyle: 'compress',
+          includePaths: require('node-bourbon').includePaths,
         },
         files: {
           'css/app.css': 'scss/app.scss',
