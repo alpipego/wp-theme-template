@@ -294,4 +294,3 @@
  */
 
     require_once 'functions/path.php';
-    require_once 'functions/clean-wp-functions.php';
