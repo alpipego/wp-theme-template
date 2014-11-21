@@ -55,13 +55,7 @@
     add_action( 'wp_head', __NAMESPACE__ . '\\ajaxurl' );
 
     function ajaxurl() {
-        echo '<script type="text/javascript">var ajaxurl = ' . \admin_url('admin-ajax.php') . '</script>';
-    }
-
-    add_action( 'pre_get_posts', __NAMESPACE__ . '\\test' );
-
-    function test() {
-        echo '<script type="text/javascript">var ajaxurl = "' . admin_url('admin-ajax.php') . '"</script>';
+        echo '<script type="text/javascript">var ajaxurl = "' . \admin_url('admin-ajax.php') . '"</script>';
     }
 
 /**
@@ -79,15 +73,15 @@
  *	ENQUEUE SCRIPTS
  */
 
-    // add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\addScripts' );
+    add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\addScripts' );
     // add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\addAdminScripts' );
 
     function addScripts() 
     {
-        \wp_register_script( '', __NAMESPACE__ . get_path( 'js' ) . '', array(  ), '', true );
+        \wp_register_script( 'app', namespace\Path::js() . 'app.min.js', array( 'jquery' ), '', false );
 
     	\wp_enqueue_script( array(
-    	
+                'app',    	
         	) 
     	);
 
@@ -99,7 +93,7 @@
 
     function addAdminScripts($hook_suffix) 
     {
-        wp_register_script( '', get_path( 'js' ) . '', array( 'jquery' ), '', true );
+        \wp_register_script( '', get_path( 'js' ) . '', array( 'jquery' ), '', true );
 
     	if ( $hook_suffix == '' ) {
     		wp_enqueue_script( array(

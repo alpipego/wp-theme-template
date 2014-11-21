@@ -1,6 +1,12 @@
 <?php
     $path = new \Theme\Functions\Path();
+    // echo '<code><pre>';
+    //     var_dump($path->parentTheme());
+    // echo '</pre></code>';
 
+    echo '<code><pre>';
+        var_dump(\Theme\Functions\Path::js());
+    echo '</pre></code>';
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
@@ -12,22 +18,21 @@
 	<title><?php bloginfo( 'name' ); ?></title>
 
 	
-	<link rel="icon" href="<?php $path->template(); ?>favicon.ico" type="">
-	<link rel="shortcut icon" href="<?php  $path->template(); ?>favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="<?php $path->images(); ?>favicon.ico" type="">
+	<link rel="shortcut icon" href="<?php  $path->images(); ?>favicon.ico" type="image/x-icon" />
 
     <?php // styles either here or the proper way via wp_enqueue_styles in functions.php ?>
-	<link rel="stylesheet" href="<?= $path->template(); ?>normalize.css" />
-	<link rel="stylesheet" href="<?php $path->template(); ?>styles.css" />
+	<link rel="stylesheet" href="<?= $path->css(); ?>normalize.css" />
+	<link rel="stylesheet" href="<?php $path->css(); ?>styles.css" />
 	<?php wp_head(); ?>
 	<script>
-		var $ = jQuery.noConflict();
 		if (window.navigator.msMaxTouchPoints) {
 			$( 'html' ).removeClass( 'no-touch' ).addClass( 'touch' );
 		}
 	</script>
 
 </head>
-<body class="" id="#top">
+<body id="#top" class="">
 	
 
 	<header>
@@ -38,4 +43,3 @@
 
 	<div id="main" class="main">	
 		<div class="main-inner">
-        <?= __NAMESPACE__; ?>

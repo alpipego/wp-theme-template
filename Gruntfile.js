@@ -44,12 +44,12 @@ module.exports = function(grunt) {
       dev: {
         files: [
           {
-            // expand: true,     // Enable dynamic expansion.
-            // cwd: 'src/',      // Src matches are relative to this path.
-            // src: ['**/*.js'], // Actual pattern(s) to match.
-            // dest: 'js/',   // Destination path prefix.
-            // ext: '.min.js',   // Dest filepaths will have this extension.
-            // extDot: 'first',   // Extensions in filenames begin after the first dot
+            expand: true,     // Enable dynamic expansion.
+            cwd: 'src/',      // Src matches are relative to this path.
+            src: ['**/*.js'], // Actual pattern(s) to match.
+            dest: 'js/',   // Destination path prefix.
+            ext: '.min.js',   // Dest filepaths will have this extension.
+            extDot: 'first',   // Extensions in filenames begin after the first dot
           },
         ],
       }
