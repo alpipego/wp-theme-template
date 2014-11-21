@@ -11,7 +11,7 @@ Check the `Path` class and see if it reflects your folder structure. The assumpt
 ```
     wordpress
         assets
-            images
+            img
             css
             js
             themes

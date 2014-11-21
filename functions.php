@@ -85,10 +85,10 @@
         	) 
     	);
 
-    	\wp_localize_script( handle, name, array(
+    	// \wp_localize_script( handle, name, array(
 
-        	) 
-        );
+            //) 
+        //);
     }
 
     function addAdminScripts($hook_suffix) 

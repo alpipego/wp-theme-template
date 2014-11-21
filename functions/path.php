@@ -32,9 +32,9 @@
         static function css()
         {
             if (self::assets() === 'wp_content') {
-                return \trailingslashit(self::theme() . 'css');
+                return \trailingslashit(self::theme() . 'css/');
             } else {
-                return self::urlWithoutProtocol(\constant('\WP_CONTENT_URL') . 'css/');
+                return self::urlWithoutProtocol(\constant('\WP_CONTENT_URL') . '/css/');
             }
         }
 
@@ -42,6 +42,8 @@
         {
             if (self::assets() === 'wp_content') {
                 return \trailingslashit(self::theme() . 'js');
+            } else {
+                return self::urlWithoutProtocol(\constant('\WP_CONTENT_URL') . '/js/');
             }
         }
 
@@ -49,6 +51,8 @@
         {
             if (self::assets() === 'wp_content') {
                 return \trailingslashit(self::theme() . 'images');
+            } else {
+                return self::urlWithoutProtocol(\constant('\WP_CONTENT_URL') . '/img/');
             }
         }
     }
