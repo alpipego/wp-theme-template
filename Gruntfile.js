@@ -31,27 +31,26 @@ module.exports = function(grunt) {
       dist: {
         files: [
           {
-            expand: true,     // Enable dynamic expansion.
-            cwd: 'src/',      // Src matches are relative to this path.
-            src: ['**/*.js'], // Actual pattern(s) to match.
-            dest: 'js/',   // Destination path prefix.
-            ext: '.min.js',   // Dest filepaths will have this extension.
-            extDot: 'first',   // Extensions in filenames begin after the first dot
+            expand: true,
+            cwd: 'src/',
+            src: ['**/*.js'],
+            dest: 'js/',
+            ext: '.min.js',
+            extDot: 'first'
           },
         ],
       }
     },
 
-    copy: {
+    sync: {
       dev: {
         files: [
           {
-            expand: true,     // Enable dynamic expansion.
-            cwd: 'src/',      // Src matches are relative to this path.
-            src: ['**/*.js'], // Actual pattern(s) to match.
-            dest: 'js/',   // Destination path prefix.
-            ext: '.min.js',   // Dest filepaths will have this extension.
-            extDot: 'first',   // Extensions in filenames begin after the first dot
+            expand: true,
+            cwd: 'src/',
+            src: ['**/*.js'], 
+            dest: 'js/',
+            ext: '.min.js'
           },
         ],
       }
@@ -67,7 +66,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: 'src/**/*.js',
-        tasks: ['copy:dev'],
+        tasks: ['sync:dev'],
       },
     },
   });
@@ -75,8 +74,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-sync');
 
   grunt.registerTask('build', ['sass:dist', 'uglify:dist']);
-  grunt.registerTask('default', ['sass:dev', 'copy:dev', 'watch']);
+  grunt.registerTask('default', ['sass:dev', 'sync:dev', 'watch']);
 }
