@@ -14,35 +14,29 @@ $base-line-height: 1.5 !default;
 
 $padding: .9375em !default;
 $padding-sm: .9375em * .5 !default;
+
 /**
  * custom
  */
-$sky:   #88B6E5;
-$white: #ecf0f1;//#E3E3E8;
-$wheat: #D4CCAE;
-
-$quan:  #36363d;
-$gray: lighten($quan, 30%);
-
-$facebook-color: #3B5998;
-$twitter-color:#00BBF5;
-$gplus-color:#D74634;
-$adminbar: 32px;
-
-$purple-dark: rgba(39, 31, 61, 1);
-$purple-light: rgba(73, 65, 89, 1);
-$purple-border: rgba(72, 66, 86, 1);
-
-$green: rgba(39, 174, 96,1.0); //rgba(138, 200, 118, 1);
-$red: rgba(212, 91, 91, 1);
-$blue: rgba(41, 128, 185, 1);
-
-$twitter: rgb(119, 167, 220);
-$facebook: rgb(69, 88, 151);
-
-$sans: 'Source Sans Pro', sans-serif;
-$serif: Georgia, serif;
+$sky:   rgba(136, 182, 229, 1.0);
+$white: rgba(236, 240, 241, 1.0);
+$wheat: rgba(212, 204, 174, 1.0);
 
 $dark: rgb(44, 62, 80);
-$grey: rgb(127, 140, 141);
+$gray: lighten($quan, 30%);
+$grey: $gray;
+
+$facebook-color: rgba(59, 89, 152, 1.0);
+$twitter-color:  rgba(0, 187, 245, 1.0);
+$gplus-color:    rgba(215, 70, 52, 1.0);
+
+$adminbar: 32px;
+
+$green: rgba(39, 174, 96,1.0);
+$red:   rgba(212, 91, 91, 1);
+$blue:  rgba(41, 128, 185, 1);
+
+$sans:  'Source Sans Pro', sans-serif;
+$serif: Georgia, serif;
+
 
