@@ -1,0 +1,135 @@
+html, 
+body { 
+    height: 100%; 
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+}
+
+body {
+    font: {
+        size: .6em;
+        family: $sans;
+    }
+    color: $dark;
+    // overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    @media #{$small-up} {
+        font-size: .8em;
+    }
+    @media #{$medium-up} {
+        font-size: .85em;
+    }
+    @media #{$large-up} {
+        font-size: 1em;
+    }
+}
+
+img { 
+    max-width: 100%; 
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid $green;
+    box-shadow: inset 0 -3px $green;
+    color: $dark;
+    @include transition-duration(.2s);
+    outline: 0;
+    &:hover {
+        background: $green;
+        @include transition-duration(.5s);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include grid-column(12);
+    font: {
+        family: $sans;
+        weight: 600;
+    }
+    color: $purple-dark;
+    margin:{
+        top: 1em;
+        bottom: .3em
+    }
+    & + p,
+    & + ul,
+    & + ol {
+        margin-top: 0;
+    }
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.3em;
+}
+
+h6 {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+p,
+ul,
+ol {
+    @include grid-column();
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+        margin-top: 0;
+    }
+}
+
+ul,
+ol {
+    padding-left: 1.5em;
+    font-size: 1.2em;
+    li {
+        line-height: 1.5;
+        margin-bottom: .9375em * .5;
+    }
+}
+
+aside {
+    @include grid-column(12);
+}
+
+section {
+    @include grid-column(12);
+}
+
+.main-container {
+    @include grid-column(12);
+}

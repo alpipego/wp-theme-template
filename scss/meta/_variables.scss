@@ -1,0 +1,48 @@
+/**
+ * Foundation
+ */
+$include-html-grid-classes: false !default;
+$include-xl-html-grid-classes: false !default;
+
+$row-width: rem-calc(1000) !default;
+$total-columns: 12 !default;
+$column-gutter: rem-calc(30) !default;
+$default-float: left !default;
+
+$base-font-size: 100% !default;
+$base-line-height: 1.5 !default;
+
+$padding: .9375em !default;
+$padding-sm: .9375em * .5 !default;
+/**
+ * custom
+ */
+$sky:   #88B6E5;
+$white: #ecf0f1;//#E3E3E8;
+$wheat: #D4CCAE;
+
+$quan:  #36363d;
+$gray: lighten($quan, 30%);
+
+$facebook-color: #3B5998;
+$twitter-color:#00BBF5;
+$gplus-color:#D74634;
+$adminbar: 32px;
+
+$purple-dark: rgba(39, 31, 61, 1);
+$purple-light: rgba(73, 65, 89, 1);
+$purple-border: rgba(72, 66, 86, 1);
+
+$green: rgba(39, 174, 96,1.0); //rgba(138, 200, 118, 1);
+$red: rgba(212, 91, 91, 1);
+$blue: rgba(41, 128, 185, 1);
+
+$twitter: rgb(119, 167, 220);
+$facebook: rgb(69, 88, 151);
+
+$sans: 'Source Sans Pro', sans-serif;
+$serif: Georgia, serif;
+
+$dark: rgb(44, 62, 80);
+$grey: rgb(127, 140, 141);
+
