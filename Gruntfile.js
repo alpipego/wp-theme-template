@@ -9,9 +9,9 @@ module.exports = function(grunt) {
           includePaths: require('node-bourbon').includePaths,
         },
         files: {
-          'css/app.css': 'scss/app.scss',
-          'css/normalize.css': 'scss/normalize.scss',
-          'css/ie.css': 'scss/ie.scss',
+          'css/app.css': 'src/scss/app.scss',
+          'css/normalize.css': 'src/scss/normalize.scss',
+          'css/ie.css': 'src/scss/ie.scss',
         },
       },
       dist: {
@@ -20,9 +20,9 @@ module.exports = function(grunt) {
           includePaths: require('node-bourbon').includePaths,
         },
         files: {
-          'css/app.css': 'scss/app.scss',
-          'css/normalize.css': 'scss/normalize.scss',
-          'css/ie.css': 'scss/ie.scss',
+          'css/app.css': 'src/scss/app.scss',
+          'css/normalize.css': 'src/scss/normalize.scss',
+          'css/ie.css': 'src/scss/ie.scss',
         },
       },
     },
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'src/',
+            cwd: 'src/js',
             src: ['**/*.js'],
             dest: 'js/',
             ext: '.min.js',
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            cwd: 'src/',
+            cwd: 'src/js',
             src: ['**/*.js'], 
             dest: 'js/',
             ext: '.min.js'
