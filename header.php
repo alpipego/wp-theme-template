@@ -17,7 +17,7 @@
 
     <?php // styles either here or the proper way via wp_enqueue_styles in functions.php ?>
 	<link rel="stylesheet" href="<?= $path->css(); ?>normalize.css" />
-	<link rel="stylesheet" href="<?php $path->css(); ?>styles.css" />
+	<link rel="stylesheet" href="<?= $path->css(); ?>styles.css" />
 	<?php wp_head(); ?>
 	<script>
 		if (window.navigator.msMaxTouchPoints) {
