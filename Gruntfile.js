@@ -62,7 +62,7 @@ module.exports = function(grunt) {
         tasks: ['sass:dev', 'sync:dev']
       },
       sass: {
-        files: 'scss/**/*.scss',
+        files: 'src/**/*.scss',
         tasks: ['sass:dev']
       },
       js: {
