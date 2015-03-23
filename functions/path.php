@@ -50,7 +50,7 @@
         static function images()
         {
             if (self::assets() === 'wp_content') {
-                return \trailingslashit(self::theme() . 'images');
+                return \trailingslashit(self::theme() . 'img');
             } else {
                 return self::urlWithoutProtocol(\constant('\WP_CONTENT_URL') . '/img/');
             }
