@@ -6,25 +6,25 @@ module.exports = function(grunt) {
       dev: {
         options: {
           outputStyle: 'expanded',
-          includePaths: require('node-bourbon').includePaths,
+          includePaths: require('node-bourbon').includePaths
         },
         files: {
           'css/app.css': 'src/scss/app.scss',
           'css/normalize.css': 'src/scss/normalize.scss',
-          'css/ie.css': 'src/scss/ie.scss',
-        },
+          'css/ie.css': 'src/scss/ie.scss'
+        }
       },
       dist: {
         options: {
           outputStyle: 'compress',
-          includePaths: require('node-bourbon').includePaths,
+          includePaths: require('node-bourbon').includePaths
         },
         files: {
           'css/app.css': 'src/scss/app.scss',
           'css/normalize.css': 'src/scss/normalize.scss',
-          'css/ie.css': 'src/scss/ie.scss',
-        },
-      },
+          'css/ie.css': 'src/scss/ie.scss'
+        }
+      }
     },
 
     uglify: {
@@ -37,8 +37,8 @@ module.exports = function(grunt) {
             dest: 'js/',
             ext: '.min.js',
             extDot: 'first'
-          },
-        ],
+          }
+        ]
       }
     },
 
@@ -51,22 +51,23 @@ module.exports = function(grunt) {
             src: ['**/*.js'], 
             dest: 'js/',
             ext: '.min.js'
-          },
-        ],
+          }
+        ]
       }
     },
 
     watch: {
       grunt: { 
-        files: ['Gruntfile.js'] 
+        files: ['Gruntfile.js'],
+        tasks: ['sass:dev', 'sync:dev']
       },
       sass: {
-        files: 'sass/**/*.scss',
-        tasks: ['sass:dev'],
+        files: 'scss/**/*.scss',
+        tasks: ['sass:dev']
       },
       js: {
         files: 'src/**/*.js',
-        tasks: ['sync:dev'],
+        tasks: ['sync:dev']
       },
     },
   });
