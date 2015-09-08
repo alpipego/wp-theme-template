@@ -1,0 +1,10 @@
+{
+    "name": "alpipego/theme-template",
+    "description": "Custom WordPress Theme Templat",
+    "license": "MIT",
+    "type": "wordpress-theme",
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    }
+}
