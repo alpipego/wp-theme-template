@@ -5,7 +5,7 @@ My starting point for creating a wordpress theme, built with foundation5-grid, g
 * Changed scss/foundation/components/_grid.scss line 98 `collapse: false` to `collapse: true`
 * `git-archive.sh` is an archiving script, that best works when a tag is checked out. It then creates a zip file in the format `REPO_NAME`.`TAG`.zip
 
-# Usage
+<!-- # Usage
 
 Check the `Path` class and see if it reflects your folder structure. The assumption is either that you use the default wordpress structure (with all files inside the theme folder in `wp-content/themes/`) or an alternative in the form:
 
@@ -36,4 +36,4 @@ define ('WP_PLUGIN_URL', WP_SITEURL .'extensions');
 define( 'UPLOADS', '/uploads' );
 ```
 
-If you choose a different structure for these files you should reflect these changes in the `Path` class 
+If you choose a different structure for these files you should reflect these changes in the `Path` class  -->
