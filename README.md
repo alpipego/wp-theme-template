@@ -3,6 +3,7 @@
 My starting point for creating a wordpress theme, built with foundation5-grid, grunt, libsass, bourbon
 
 * Changed scss/foundation/components/_grid.scss line 98 `collapse: false` to `collapse: true`
+* `git-archive.sh` is an archiving script, that best works when a tag is checked out. It then creates a zip file in the format `REPO_NAME`.`TAG`.zip
 
 # Usage
 
