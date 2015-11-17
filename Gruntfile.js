@@ -1,49 +1,51 @@
 module.exports = function(grunt) {
+  var config = {
+    'styles': {
+      'css/app.css': 'src/scss/app.scss',
+      'css/normalize.css': 'src/scss/normalize.scss'
+    }
+  };
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    config: config,
+
 
     sass: {
       dev: {
         options: {
-          outputStyle: 'expanded',
+          outputStyle: 'compressed',
+          sourceMap: true,
           includePaths: require('node-bourbon').includePaths
         },
-        files: {
-          'css/app.css': 'src/scss/app.scss',
-          'css/normalize.css': 'src/scss/normalize.scss',
-          'css/ie.css': 'src/scss/ie.scss'
-        }
+        files: '<%= config.styles %>'
       },
+      
       dist: {
         options: {
-          outputStyle: 'compress',
+          outputStyle: 'compressed',
           includePaths: require('node-bourbon').includePaths
         },
-        files: {
-          'css/app.css': 'src/scss/app.scss',
-          'css/normalize.css': 'src/scss/normalize.scss',
-          'css/ie.css': 'src/scss/ie.scss'
-        }
+        files: '<%= config.styles %>'
       }
     },
 
-    uglify: {
-      dist: {
+    uglify : {
+      dev: {
+        options : {
+          sourceMap : true
+        },
         files: [
           {
             expand: true,
             cwd: 'src/js',
-            src: ['**/*.js'],
+            src: ['**/*.js'], 
             dest: 'js/',
-            ext: '.min.js',
-            extDot: 'first'
+            ext: '.min.js'
           }
         ]
-      }
-    },
-
-    sync: {
-      dev: {
+      },
+      dist : {
         files: [
           {
             expand: true,
@@ -59,7 +61,7 @@ module.exports = function(grunt) {
     watch: {
       grunt: { 
         files: ['Gruntfile.js'],
-        tasks: ['sass:dev', 'sync:dev']
+        tasks: ['sass:dev', 'uglify:dev']
       },
       sass: {
         files: 'src/**/*.scss',
@@ -67,7 +69,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: 'src/**/*.js',
-        tasks: ['sync:dev']
+        tasks: ['uglify:dev']
       },
     },
   });
@@ -78,5 +80,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sync');
 
   grunt.registerTask('build', ['sass:dist', 'uglify:dist']);
-  grunt.registerTask('default', ['sass:dev', 'sync:dev', 'watch']);
+  grunt.registerTask('default', ['sass:dev', 'uglify:dev', 'watch']);
 }
