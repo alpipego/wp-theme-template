@@ -1,15 +1,7 @@
 module.exports = function(grunt) {
-  var config = {
-    'styles': {
-      'css/app.css': 'src/scss/app.scss',
-      'css/normalize.css': 'src/scss/normalize.scss'
-    }
-  };
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    config: config,
-
 
     sass: {
       dev: {
@@ -18,15 +10,19 @@ module.exports = function(grunt) {
           sourceMap: true,
           includePaths: require('node-bourbon').includePaths
         },
-        files: '<%= config.styles %>'
+        files: {
+          'css/app.css': 'src/scss/app.scss'
+        }
       },
-      
+
       dist: {
         options: {
           outputStyle: 'compressed',
           includePaths: require('node-bourbon').includePaths
         },
-        files: '<%= config.styles %>'
+        files: {
+          'css/app.css': 'src/scss/app.scss'
+        }
       }
     },
 
@@ -39,7 +35,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'src/js',
-            src: ['**/*.js'], 
+            src: ['**/*.js'],
             dest: 'js/',
             ext: '.min.js'
           }
@@ -50,7 +46,7 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'src/js',
-            src: ['**/*.js'], 
+            src: ['**/*.js'],
             dest: 'js/',
             ext: '.min.js'
           }
@@ -59,7 +55,7 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      grunt: { 
+      grunt: {
         files: ['Gruntfile.js'],
         tasks: ['sass:dev', 'uglify:dev']
       },

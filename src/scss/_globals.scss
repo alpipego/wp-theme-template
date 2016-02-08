@@ -1,6 +1,6 @@
-html, 
-body { 
-    height: 100%; 
+html,
+body {
+    height: 100%;
     font-size: 16px;
 }
 
@@ -12,41 +12,17 @@ body {
 
 body {
     font: {
-        size: .6em;
-        family: $sans;
+        size: rem-calc(16);
+        family: $body;
     }
+    line-height: 1.25;
     color: $dark;
-    overflow-x: hidden;
     padding: 0;
     margin: 0;
     position: relative;
-    @media #{$small-up} {
-        font-size: .8em;
-    }
     @media #{$medium-up} {
-        font-size: .85em;
-    }
-    @media #{$large-up} {
-        font-size: 1em;
-    }
-}
-
-img { 
-    max-width: 100%; 
-    height: auto;
-    -ms-interpolation-mode: bicubic;
-}
-
-
-a {
-    text-decoration: none;
-    border-bottom: 1px solid $linkColor;
-    color: $dark;
-    @include transition-duration(.2s);
-    outline: 0;
-    &:hover {
-        border-bottom-color: $linkHoverColor;
-        @include transition-duration(.5s);
+        font-size: 110%;
+        line-height: 1.375;
     }
 }
 
@@ -56,16 +32,15 @@ h3,
 h4,
 h5,
 h6 {
-    @include grid-column(12);
     font: {
-        family: $sans;
-        weight: 600;
+        weight: 300;
+        family: $heading;
     }
-    color: $dark;
     margin:{
-        top: 1em;
+        top: rem-calc(1em);
         bottom: .3em
     }
+    text-transform: uppercase;
     & + p,
     & + ul,
     & + ol {
@@ -74,34 +49,33 @@ h6 {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: rem-calc(32);
+    @media #{$medium-up} {
+        font-size: rem-calc(38);
+    }
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: rem-calc(24);
+    @media #{$medium-up} {
+        font-size: rem-calc(28.8);
+    }
 }
 
 h3 {
-    font-size: 1.6em;
+    font-size: rem-calc(22);
+    @media #{$medium-up} {
+        font-size: rem-calc(24);
+    }
 }
 
 h4 {
-    font-size: 1.4em;
-}
-
-h5 {
-    font-size: 1.3em;
-}
-
-h6 {
-    font-size: 1.2em;
-    font-style: italic;
+    font-size: rem-calc(20);
 }
 
 p,
 ul,
 ol {
-    @include grid-column();
     & + h2,
     & + h3,
     & + h4,
@@ -113,12 +87,25 @@ ol {
 
 ul,
 ol {
-    padding-left: 1.5em;
-    font-size: 1.2em;
+    padding-left: $padding * 2;
     li {
-        line-height: 1.5;
-        margin-bottom: .9375em * .5;
+        line-height: 1.25;
+        margin-bottom: $padding * .5;
     }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+
+a {
+    @include transition-duration(.2s);
+    text-decoration: none;
+    color: $dark;
+    outline: 0;
 }
 
 aside {
@@ -129,6 +116,12 @@ section {
     @include grid-column(12);
 }
 
-.main-container {
+.main {
+    @include grid-row();
+    max-width: 1400px;
+}
+
+.main-inner {
     @include grid-column(12);
+    padding: $padding;
 }
