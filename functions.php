@@ -3,7 +3,7 @@
 /**
  * Basic Theme Setup
  */
-include 'functions/basicSetup.php';
+include 'functions/BasicSetup.php';
 
 
 /**
