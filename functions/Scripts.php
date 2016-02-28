@@ -32,11 +32,9 @@ function addAdminScripts($hook_suffix)
 
 add_action('wp_enqueue_scripts', function() {
     $css = get_stylesheet_directory_uri() . '/css/';
-    wp_register_style('normalize', $css . 'normalize.css', array());
-    wp_register_style('app', $css . 'app.css', array('normalize'));
+    wp_register_style('app', $css . 'app.css');
 
-    wp_enqueue_style(array(
-        'normalize',
+    wp_enqueue_style([
         'app'
-    ));
+    ]);
 });
