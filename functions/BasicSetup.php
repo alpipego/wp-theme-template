@@ -46,4 +46,4 @@ function get_path()
 
 add_action('after_setup_theme', function() {
     load_theme_textdomain('my_theme', get_template_directory() . '/languages');
-}
+});
