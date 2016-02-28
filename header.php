@@ -7,8 +7,8 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 	<title><?= get_bloginfo('name'); ?></title>
 
-	<link rel="icon" href="<?= path(); ?>images/favicon.ico">
-	<link rel="shortcut icon" href="<?= path(); ?>images/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="<?= get_path(); ?>images/favicon.ico">
+	<link rel="shortcut icon" href="<?= get_path(); ?>images/favicon.ico" type="image/x-icon" />
 
     <?php wp_head(); ?>
 	
