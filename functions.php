@@ -39,6 +39,24 @@ include 'functions/NavigationMenus.php';
 include 'functions/Excerpt.php';
 
 /**
+ * Clean content of nested markup
+ */
+
+include 'functions/CleanContent.php';
+
+/**
+ * Blog Index
+ */
+
+require_once 'functions/Index.php';
+
+/**
+ * Single Post
+ */
+
+require_once 'functions/Single.php';
+
+/**
  * print template in footer
  */
 add_action('wp_footer', function() {

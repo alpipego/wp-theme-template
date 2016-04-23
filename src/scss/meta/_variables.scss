@@ -4,7 +4,7 @@
 $include-html-grid-classes: false !default;
 $include-xl-html-grid-classes: false !default;
 
-$row-width: rem-calc(1000) !default;
+$row-width: rem-calc(1400) !default;
 $opposite-direction: right !default;
 $total-columns: 12 !default;
 $column-gutter: rem-calc(30) !default;
@@ -13,8 +13,8 @@ $default-float: left !default;
 $base-font-size: 100% !default;
 $base-line-height: 1.5 !default;
 
-$padding: .9375em !default;
-$padding-sm: .9375em * .5 !default;
+$padding: rem-calc(15) !default;
+$padding-sm: $padding * .5 !default;
 
 /**
  * COLORS
@@ -40,7 +40,7 @@ $linkHoverColor: $red;
 $sans: 'Source Sans Pro', sans-serif;
 $serif: Georgia, serif;
 $body: $serif;
-$heading: $sans;
+$heading: $serif;
 
 /**
  * OTHER

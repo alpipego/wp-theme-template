@@ -1,0 +1,65 @@
+.filter {
+    @include grid(100);
+}
+
+.js {
+    .filter {
+        visibility: hidden;
+        max-height: 0;
+        opacity: 0;
+        @include transition(opacity .3s ease-out 0, max-height 0 ease-out .3s)
+        // @include transition-property(max-height);
+        // @include transition-delay(.3s);
+        &.showing {
+            max-width: $row-width;
+            z-index: 10;
+            visibility: visible;
+            max-height: none;
+            overflow-y: scroll;
+            position: absolute;
+            background-color: rgba(#fff, .9);
+            opacity: 1;
+            @include transition-property(opacity);
+            @include transition-duration(.3s);
+            @include transition-delay(0s);
+        }
+    }
+}
+
+.filter-container-years,
+.filter-container-tags {
+    @include grid(100);
+}
+
+.filter-decades {
+    list-style-type: none;
+    @include grid(100);
+}
+    .filter-decade {
+        @include grid(100);
+        text-align: left;
+        // border-bottom: 1px solid $dark;
+        &.expanded {
+            .filter-years {
+                display: block;
+            }
+        }
+    }
+
+.filter-years {
+    list-style-type: none;
+    text-align: center;
+    display: none;
+}
+    .filter-year {
+        // @include grid(2/3);
+    }
+
+.filter-tags {
+    list-style-type: none;
+    @include grid(100);
+}
+    .filter-tag {
+        float: left;
+        padding: $padding-sm $padding;
+    }

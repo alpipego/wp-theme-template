@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Save this somewhere in your path as "git-archive-file" 
+# Save this somewhere in your path as "git-archive-file"
 # and do 'chmod u+x git-archive-file'
 
 # If run at tag "v10.0", archvie file will be named "repo-v10.0.zip"

@@ -1,5 +1,18 @@
 // Source Sans Pro
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic);
+// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic);
 
 // Ionicons Icon Font
-@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+// @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+@font-face {
+    font-family: 'coelnische_current_frakturRg';
+    src: url('../fonts/coelnischecurrentfraktur.eot');
+    src: url('../fonts/coelnischecurrentfraktur.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/coelnischecurrentfraktur.woff2') format('woff2'),
+         url('../fonts/coelnischecurrentfraktur.woff') format('woff'),
+         url('../fonts/coelnischecurrentfraktur.ttf') format('truetype'),
+         url('../fonts/coelnischecurrentfraktur.svg#coelnische_current_frakturRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

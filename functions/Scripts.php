@@ -1,18 +1,37 @@
 <?php
 
-add_action( 'wp_enqueue_scripts', function() {
+add_action('wp_enqueue_scripts', function() {
     $js = get_stylesheet_directory_uri() . '/js/';
-    wp_register_script('app', $js . 'app.min.js', array('jquery'), '', false);
+    wp_register_script('app', $js . 'app.min.js', ['jquery', 'scrollspy'], '', true);
+    wp_register_script('index', $js . 'index.min.js', ['jquery', 'isotope', 'app', 'loadie'], '', true);
+    wp_register_script('loadie', $js . 'loadie.min.js', ['jquery'], '', true);
+    wp_register_script('scrollspy', $js . 'scrollspy.min.js', ['jquery'], '', true);
+    wp_register_script('masonry', 'https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js', ['jquery'], '', true);
+    wp_register_script('isotope', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', ['jquery', 'imagesLoaded'], '', true);
+    wp_register_script('imagesLoaded', 'https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js', [], '', true);
 
-    wp_enqueue_script( array(
-            'app',      
-        ) 
+    wp_enqueue_script([
+            'app'
+        ]
     );
 
-    // \wp_localize_script( handle, name, array(
+    if (is_home() || is_archive()) {
+        wp_enqueue_script([
+            'index'
+        ]);
+    }
 
-        //) 
-    //);
+    if (is_archive()) {
+        $tax = get_queried_object();
+
+        wp_localize_script('index', 'query_request', [
+            'tax_query' => [
+                'taxonomy' => $tax->taxonomy,
+                'field' => 'term_taxonomy_id',
+                'terms' => $tax->term_taxonomy_id
+            ]
+        ]);
+    }
 });
 
 // Inline script
@@ -20,7 +39,7 @@ add_action('wp_head', function() {
     echo '<script>if (window.navigator.msMaxTouchPoints) { $("html").removeClass("no-touch").addClass("touch"); }</script>';
 });
 
-function addAdminScripts($hook_suffix) 
+function addAdminScripts($hook_suffix)
 {
     wp_register_script( '', get_path( 'js' ) . '', array( 'jquery' ), '', true );
 
@@ -40,7 +59,7 @@ add_action('wp_enqueue_scripts', function() {
     wp_register_style('normalize', $css . 'normalize.css', array());
     wp_register_style('app', $css . 'app.css', array('normalize'));
 
-    wp_enqueue_style(array( 
+    wp_enqueue_style(array(
         'normalize',
         'app'
     ));

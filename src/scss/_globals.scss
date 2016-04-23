@@ -40,7 +40,6 @@ h6 {
         top: rem-calc(1em);
         bottom: .3em
     }
-    text-transform: uppercase;
     & + p,
     & + ul,
     & + ol {
@@ -106,6 +105,10 @@ a {
     text-decoration: none;
     color: $dark;
     outline: 0;
+    &:active,
+    &:focus {
+        outline: 0;
+    }
 }
 
 aside {
@@ -116,6 +119,8 @@ section {
     @include grid-column(12);
 }
 
+header,
+.footer,
 .main {
     @include grid-row();
     max-width: 1400px;
@@ -123,5 +128,9 @@ section {
 
 .main-inner {
     @include grid-column(12);
-    padding: $padding;
+    // padding: $padding;
+}
+
+.disable-scrolling {
+    overflow: hidden;
 }
