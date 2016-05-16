@@ -68,25 +68,23 @@ require_once 'functions/Single.php';
  */
 add_action('wp_footer', function() {
     global $template;
-    // print_r( $template );
+
+    if (isset($_GET['template']) && $_GET['template']) {
+        print_r( $template );
+    }
 });
 
 /**
  * Add meta information to head
  */
-add_action('wp_head', function() {
-    if (get_previous_posts_link() !== null) {
-        preg_match('%href="(.+?)"%', get_previous_posts_link(), $matches);
-        echo sprintf('<link rel="prev" href="%s" />', $matches[1]);
-    }
+// add_action('wp_head', function() {
+//     if (get_previous_posts_link() !== null) {
+//         preg_match('%href="(.+?)"%', get_previous_posts_link(), $matches);
+//         echo sprintf('<link rel="prev" href="%s" />', $matches[1]);
+//     }
 
-    if (get_next_posts_link() !== null) {
-        preg_match('%href="(.+?)"%', get_next_posts_link(), $matches);
-        echo sprintf('<link rel="next" href="%s" />', $matches[1]);
-    }
-});
-
-function path()
-{
-    return trailingslashit(get_stylesheet_directory_uri());
-}
+//     if (get_next_posts_link() !== null) {
+//         preg_match('%href="(.+?)"%', get_next_posts_link(), $matches);
+//         echo sprintf('<link rel="next" href="%s" />', $matches[1]);
+//     }
+// });
