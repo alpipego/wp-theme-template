@@ -1,10 +1,9 @@
 //custom stuff goes here
-
 jQuery(document).ready(function($) {
     $('html').removeClass('no-js').addClass('js');
 
     // header image
-    var logoSrc = $('#header-logo').data('src') + '?width=' + $('#header-logo').width();
+    var logoSrc = $('#header-logo').data('src') + '?width=' + ($('#header-logo').width() * window.devicePixelRatio);
 
     var image = new Image();
     image.src = logoSrc;
@@ -46,7 +45,7 @@ jQuery(document).ready(function($) {
     });
 
     $(window).smartresize(function() {
-        $('#header-logo').attr('src', $('#header-logo').data('src') + '?width=' + $('#header-logo').width());
+        $('#header-logo').attr('src', $('#header-logo').data('src') + '?width=' + ($('#header-logo').width()  * window.devicePixelRatio));
         if ($('#filter').hasClass('showing')) {
             $('#filter').css('height', $(window).outerHeight(true) - $('#filter').offset().top);
         }

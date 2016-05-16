@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
                 }
             }
 
-            $(this).attr('src', $(this).data('src') + '?width=' + imgWidth);
+            $(this).attr('src', $(this).data('src') + '?width=' + (imgWidth * window.devicePixelRatio));
         });
     }
 });

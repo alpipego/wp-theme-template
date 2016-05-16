@@ -254,15 +254,15 @@ jQuery(document).ready(function($) {
         if (el == 'all' || typeof el == 'undefined') {
             if (typeof force !== 'undefined' && force) {
                 $('.lazy').each(function() {
-                    $(this).attr('src', $(this).data('src') + '?width=' + $(this).width());
+                    $(this).attr('src', $(this).data('src') + '?width=' + ($(this).width() * window.devicePixelRatio));
                 });
                 return;
             }
             $('.lazy[src=""]').each(function() {
-                $(this).attr('src', $(this).data('src') + '?width=' + $(this).width());
+                $(this).attr('src', $(this).data('src') + '?width=' + ($(this).width() * window.devicePixelRatio));
             });
         } else {
-            el.attr('src', el.data('src') + '?width=' + el.width());
+            el.attr('src', el.data('src') + '?width=' + (el.width() * window.devicePixelRatio));
         }
     }
 
@@ -274,7 +274,8 @@ jQuery(document).ready(function($) {
             if (imgWidth > content.width() || imgWidth == 0) {
                 imgWidth = content.width();
             }
-            $(img).attr('src', $(img).data('src') + '?width=' + imgWidth);
+            
+            $(img).attr('src', $(img).data('src') + '?width=' + (imgWidth * window.devicePixelRatio));
         });
     }
 });
