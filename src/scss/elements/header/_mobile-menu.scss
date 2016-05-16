@@ -1,0 +1,38 @@
+.menu-toggle {
+  float: left;
+  @include media(680) {
+    display: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  @include media(680) {
+    display: block;
+    padding: {
+      left: $padding;
+      right: $padding;
+    }
+  }
+  @include media(680, 1020) {
+    @include display(flex);
+    @include justify-content(space-between);
+  }
+  &.showing {
+    display: block;
+    padding-top: rem-calc(70);
+  }
+  .menu-item {
+    display: block;
+    @include media(500) {
+      display: inline;
+    }
+    @include media(680, 1020) {
+      padding: 0;
+    }
+  }
+}
+

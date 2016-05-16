@@ -6,13 +6,7 @@ function getSinglePost($postId)
     $post = get_post($postId);
     setup_postdata($post);
 
-    if (!defined('DOING_AJAX') || !DOING_AJAX) :
-    ?>
-        <h1><?= get_the_title(); ?></h1>
-    <?php
-    endif;
-
-    getQuote($mainQuery->post->ID);
+    getQuote($postId);
 
     the_content();
 }

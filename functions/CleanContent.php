@@ -12,8 +12,7 @@ function cleanContent($content) {
     $content = preg_replace('%<b><span style="font-size:\s?(?:x-)?large;">(.+?)</span></b>%', '<h2>$1</h2>', $content);
     $content = preg_replace('%\s?style=".+?"%', '', $content);
     $content = preg_replace('%<br\s?/?>%', '', $content);
-    $content = preg_replace('%((<div>)+)%', '$2', $content);
-    $content = preg_replace('%((</div>)+)%', '$2', $content);
+    $content = preg_replace('%(</?div>)%', '', $content);
     $content = preg_replace('%((<blockquote>)+)%', '$2', $content);
     $content = preg_replace('%((</blockquote>)+)%', '$2', $content);
     $content = preg_replace('%<a[^/>]*?>(<img.*?>)</a>%', '$1', $content);
@@ -29,22 +28,26 @@ function cleanContent($content) {
 
     preg_match_all('%<img.*?src="(https?://(?:[^/]*?blogspot.com/.+?))".*?/?>%', $content, $images);
 
-    if (!function_exists('media_sideload_image')) {
-        require_once(ABSPATH . 'wp-admin/includes/media.php');
-        require_once(ABSPATH . 'wp-admin/includes/file.php');
-        require_once(ABSPATH . 'wp-admin/includes/image.php');
-    }
-
     if (!empty($images[1])) {
+        if (!function_exists('media_sideload_image')) {
+            require_once(ABSPATH . 'wp-admin/includes/media.php');
+            require_once(ABSPATH . 'wp-admin/includes/file.php');
+            require_once(ABSPATH . 'wp-admin/includes/image.php');
+        }
+
         $uploads = wp_upload_dir();
         stream_context_set_default(['http' => [ 'timeout' => 2, 'method' => 'HEAD',]]);
 
         foreach ($images[1] as $image) {
             $file = explode('/', $image);
             $remoteFile = $image;
-            $localFile = trailingslashit($uploads['baseurl']) . sanitize_file_name(end($file));
+            $localFile = trailingslashit($uploads['basedir']) . sanitize_file_name(end($file));
+            $localFileUrl = trailingslashit($uploads['baseurl']) . sanitize_file_name(end($file));
             $remoteFileExists = (bool) strpos(get_headers($remoteFile, 1)[0], '200');
-            $localFileExists = (bool) strpos(get_headers($localFile, 1)[0], '200');
+            $localFileExists = file_exists($localFile);
+
+            // remove links, if they only link images
+            $content = preg_replace('%<a[^>]*?href="[^"]+?\.(?:jpg|jpeg|png)"[^>]*?>(<img[^>]*?>)</a>%i', '$1', $content);
 
             if (!$remoteFileExists || ($remoteFile === $localFile && $localFileExists)) {
                 continue;
@@ -54,14 +57,13 @@ function cleanContent($content) {
                 media_sideload_image($remoteFile, $postId);
             }
 
-            $content = str_replace($remoteFile, $localFile, $content);
+            $content = str_replace($remoteFile, $localFileUrl, $content);
         }
     }
 
     // remove useless tag combinations
-    $content = preg_replace('%(?<=<blockquote>)(?:<div>)?<h2>(.*?)</h2>(?:</div>)?(?=</blockquote>)%', '$1', $content);
+    $content = preg_replace('%(?<=<blockquote>)<h2>(.*?)</h2>(?=</blockquote>)%', '$1', $content);
     $content = preg_replace('%(?<=<h2>)<span>(.*?)</span>(?=</h2>)%', '$1', $content);
-    $content = preg_replace('%<div>(<h2>.*?</h2>)</div>%', '$1', $content);
 
     return $content;
 }

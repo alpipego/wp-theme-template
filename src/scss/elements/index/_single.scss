@@ -32,14 +32,52 @@
 
 .single-full {
     @include grid(100);
-    padding-top: rem-calc(30);
+    border: {
+        top: 1px solid $dark;
+        bottom: 1px solid $dark;
+    }
+    padding: {
+        top: rem-calc(20);
+        bottom: rem-calc(20);
+    }
+    margin: {
+        top: rem-calc(20);
+        bottom: rem-calc(20);
+    }
     .wp-post-image {
+        @include media(0, 999) {
+            // overwrite js max-width
+            max-width: none !important;
+        }
         @include media(1000) {
-            @include grid($pct: 1/2, $float: right);
+            float: right;
+            max-width: 50%;
+            &.sticky {
+                position: fixed;
+                top: rem-calc(114);
+                left: 50%;
+                max-height: 80vh;
+                &.top,
+                &.bottom {
+                    position: absolute;
+                    right: $padding;
+                }
+                &.top {
+                    top: $padding * 2;
+                }
+                &.bottom {
+                    top: auto;
+                    bottom: $padding;
+                }
+            }
         }
     }
+    h1,
     h2 {
         font-size: rem-calc(36);
+    }
+    .index-single-meta {
+        display: block;
     }
     .index-single-post-link,
     .index-single-title {
@@ -58,6 +96,7 @@
         @include media(1000) {
             @include grid(1/2);
         }
+        h1,
         h2 {
             font-size: rem-calc(30);
         }
@@ -68,15 +107,28 @@
     .index-single-content-container {
         display: block;
         @include media(1000) {
-            @include grid(1/2);
-            padding-right: $padding;
+            @include grid(1/2, false, none);
+            padding-right: $padding * 2;
+        }
+        img {
+            margin: {
+                top: .5em;
+                bottom: 1em;
+            }
+        }
+        a {
+            color: darken(#eee, 25);
+            &[href$=".jpg"],
+            &[href$=".jpeg"],
+            &[href$=".png"] {
+                pointer-events: none;
+            }
         }
     }
     blockquote {
-        border-left: 4px solid $grey;
         padding-left: $padding;
         font: {
-            weight: bold;
+            //weight: bold;
             size: rem-calc(18);
         }
     }
@@ -94,8 +146,22 @@
         @include media(1000) {
             font-size: rem-calc(24);
             p {
-                font-weight: bold;
+                //font-weight: bold;
             }
+        }
+        cite {
+            font-style: normal;
+        }
+    }
+    p:empty {
+        display: none;
+    }
+
+    .single-title {
+        @include grid(100);
+        text-align: center;
+        h1 {
+            font-size: rem-calc(30);
         }
     }
 }

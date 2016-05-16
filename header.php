@@ -18,37 +18,45 @@
 
     <header>
         <a href="<?= get_bloginfo('url'); ?>">
-            <img src="http://2.bp.blogspot.com/-fb_12w2PoEc/UoADt_p0jmI/AAAAAAAACmc/p2SehwwgcjI/s1600/Header%2B11%2B%253A%2B2013.jpg" />
+            <img src="" id="header-logo" data-src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
         </a>
         <nav class="nav" id="nav">
             <ul class="main-nav">
-                <li class="menu-item">
-                    <a href="/was">Was?</a>
+                <li class="menu-item menu-toggle" id="menu-toggle">
+                    <label>Menu</label>
                 </li>
-                <li class="menu-item">
-                    <a href="/interviews">Interviews</a>
-                </li>
-                <li class="menu-item">
-                    <a href="/querverweise">Querverweise</a>
-                </li>
-                <li class="menu-item">
-                    <a href="/selfies">Selfies</a>
-                </li>
+                <div class="mobile-menu" id="mobile-menu">
+                    <li class="menu-item">
+                        <a href="/was">Was?</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="<?= get_post_type_archive_link('interview'); ?>">Interviews</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="<?= get_post_type_archive_link('querverweis'); ?>">Querverweise</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="<?= get_post_type_archive_link('selfie'); ?>">Selfies</a>
+                    </li>
+
+                    <div class="socials">
+                        <?php
+                            $facebookUrl = is_home() ? 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode(get_bloginfo('url')) : 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode(get_permalink());
+                            $twitterUrl = is_home() ? 'https://twitter.com/intent/tweet?text=' . htmlspecialchars(urlencode(html_entity_decode(get_bloginfo('title'), ENT_COMPAT, 'UTF-8'))) . '&url=' . get_bloginfo('url') : 'https://twitter.com/intent/tweet?text=' . htmlspecialchars(urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8'))) . '&url=' . get_permalink();
+
+                        ?>
+                        <a href="<?= $twitterUrl; ?>" target="_blank" id="twitter-share" class="social"><img src="<?= get_stylesheet_directory_uri() . '/img/twitter.svg'; ?>" alt="Twitter Share Button"></a>
+                        <a href="<?= $facebookUrl; ?>" target="_blank" id="facebook-share" class="social"><img src="<?= get_stylesheet_directory_uri() . '/img/facebook.svg'; ?>" alt="Twitter Share Button"></a>
+                        <a href="<?= get_bloginfo('url') . $_SERVER['REQUEST_URI']; ?>" class="social" id="link-share"><img class="link" src="<?= get_stylesheet_directory_uri() . '/img/link.svg'; ?>" alt="link image"></a>
+                    </div>
+                </div>
+
                 <li class="search menu-item" id="search-toggle">
                     <label class="search-toggle-closed">Suche</label>
                     <label class="search-toggle-open">Suche schließen</label>
                 </li>
-
-                <div class="socials">
-                    <?php
-                        $facebookUrl = is_home() ? 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode(get_bloginfo('url')) : 'https://www.facebook.com/sharer/sharer.php?u=' . urlencode(get_permalink());
-                        $twitterUrl = is_home() ? 'https://twitter.com/intent/tweet?text=' . htmlspecialchars(urlencode(html_entity_decode(get_bloginfo('title'), ENT_COMPAT, 'UTF-8'))) . '&url=' . get_bloginfo('url') : 'https://twitter.com/intent/tweet?text=' . htmlspecialchars(urlencode(html_entity_decode(get_the_title(), ENT_COMPAT, 'UTF-8'))) . '&url=' . get_permalink();
-
-                    ?>
-                    <a href="<?= $twitterUrl; ?>" target="_blank" id="twitter-share" class="social"><img src="<?= get_stylesheet_directory_uri() . '/img/twitter.svg'; ?>" alt="Twitter Share Button"></a>
-                    <a href="<?= $facebookUrl; ?>" target="_blank" id="facebook-share" class="social"><img src="<?= get_stylesheet_directory_uri() . '/img/facebook.svg'; ?>" alt="Twitter Share Button"></a>
-                </div>
             </ul>
+
 
                 <div class="filter" id="filter">
                     <div class="filter-container-years">
@@ -78,7 +86,7 @@
                         <h3>Schlagwort</h3>
                         <ul class="filter-tags">
                         <?php
-                            $tags = get_terms('post_tag');
+                            $tags = get_terms('post_tag', ['hide_empty' => true]);
                             foreach ($tags as $tag) :
                         ?>
                                 <a href="<?= get_term_link($tag->term_id); ?>"><li class="filter-tag"><?= $tag->name; ?></li></a>

@@ -3,23 +3,39 @@
 jQuery(document).ready(function($) {
     $('html').removeClass('no-js').addClass('js');
 
-    $('#nav').scrollspy({
-        min: $('#nav').offset().top,
-        max: Number.MAX_SAFE_INTEGER,
-        onEnter: function(element, position) {
-            $("#nav").addClass('fixed');
-        },
-        onLeave: function(element, position) {
-            $("#nav").removeClass('fixed full');
-            $("#filter").removeClass('showing');
-        }
+    // header image
+    var logoSrc = $('#header-logo').data('src') + '?width=' + $('#header-logo').width();
+
+    var image = new Image();
+    image.src = logoSrc;
+
+    image.onload = function() {
+        $('#header-logo').attr('src', logoSrc);
+
+        $('#nav').scrollspy({
+            min: $('#nav').offset().top - 8,
+            max: Number.MAX_SAFE_INTEGER,
+            onEnter: function(element, position) {
+                $("#nav").addClass('fixed');
+                $('header').addClass('nav-fixed');
+            },
+            onLeave: function(element, position) {
+                $("#nav").removeClass('fixed full');
+                $("#filter").removeClass('showing');
+                $('header').removeClass('nav-fixed');
+            }
+        });
+    };
+
+    $('#menu-toggle').on('click', function(e) {
+        e.preventDefault();
+        $('#mobile-menu').toggleClass('showing');
     });
 
     $('#search-toggle').on('click', function(e) {
         e.preventDefault();
-        var calcHeight = $(window).outerHeight() - $('#nav').outerHeight();
         $(this).toggleClass('showing');
-        $('#filter').toggleClass('showing').css('height', calcHeight);
+        $('#filter').toggleClass('showing').css('height', $(window).outerHeight(true) - $('#filter').offset().top);
         $('body').toggleClass('disable-scrolling');
     });
 
@@ -27,6 +43,12 @@ jQuery(document).ready(function($) {
         $(this)
             .addClass('expanded')
             .siblings('.filter-decade').removeClass('expanded');
+    });
+
+    $(window).smartresize(function() {
+        if ($('#filter').hasClass('showing')) {
+            $('#filter').css('height', $(window).outerHeight(true) - $('#filter').offset().top);
+        }
     });
 });
 

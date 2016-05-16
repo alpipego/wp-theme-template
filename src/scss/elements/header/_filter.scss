@@ -1,27 +1,33 @@
 .filter {
     @include grid(100);
-}
-
-.js {
-    .filter {
-        visibility: hidden;
-        max-height: 0;
-        opacity: 0;
-        @include transition(opacity .3s ease-out 0, max-height 0 ease-out .3s)
-        // @include transition-property(max-height);
-        // @include transition-delay(.3s);
-        &.showing {
-            max-width: $row-width;
-            z-index: 10;
-            visibility: visible;
-            max-height: none;
-            overflow-y: scroll;
-            position: absolute;
-            background-color: rgba(#fff, .9);
-            opacity: 1;
-            @include transition-property(opacity);
-            @include transition-duration(.3s);
-            @include transition-delay(0s);
+    display: none;
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    @include transition(opacity .3s ease-out 0, max-height 0 ease-out .3s);
+    padding: ($padding + rem-calc(40)) ($padding * 1.5);
+    @include media(1000, 1200) {
+        padding: {
+            right: $padding * 2;
+            left: $padding * 2;
+        }
+    }
+    &.showing {
+        max-width: $row-width;
+        z-index: 10;
+        display: block;
+        visibility: visible;
+        max-height: none;
+        overflow-y: scroll;
+        position: absolute;
+        margin-left: $padding-sm * -1;
+        background-color: rgba(#fff, .95);
+        opacity: 1;
+        @include transition-property(opacity);
+        @include transition-duration(.3s);
+        @include transition-delay(0s);
+        @include media(680, 1020) {
+            margin-top: rem-calc(50);
         }
     }
 }
@@ -34,12 +40,38 @@
 .filter-decades {
     list-style-type: none;
     @include grid(100);
+    padding-left: 0;
+    .filter-decade {
+        &:last-child {
+            border-width: 0;
+        }
+    }
 }
     .filter-decade {
-        @include grid(100);
+        @include grid($pct: 50, $position: static);
+        clear: both;
         text-align: left;
-        // border-bottom: 1px solid $dark;
+        padding: {
+            top: $padding-sm;
+            bottom: $padding-sm;
+            left: $padding;
+            right: $padding * 2;
+        }
+        margin-bottom: rem-calc(6);
+        background-color: #eee;
+        &:after {
+            content: "\203A";
+            float: right;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: darken(#eee, 5);
+            @include transition-property(background-color);
+            @include transition-duration(.3s);
+        }
         &.expanded {
+            font-weight: bold;
+            background-color: #eee;
             .filter-years {
                 display: block;
             }
@@ -47,19 +79,47 @@
     }
 
 .filter-years {
+    @include grid(50);
+    padding-left: rem-calc(6);
     list-style-type: none;
     text-align: center;
     display: none;
+    position: absolute;
+    left: 50%;
+    top: 0;
+
 }
     .filter-year {
-        // @include grid(2/3);
+        padding: {
+            top: $padding-sm;
+            bottom: $padding-sm;
+            left: $padding;
+            right: $padding * 2;
+        }
+        margin-bottom: rem-calc(6);
+        background-color: #eee;
+        font-weight: normal;
+        &:hover {
+            cursor: pointer;
+            background-color: darken(#eee, 5);
+            @include transition-property(background-color);
+            @include transition-duration(.3s);
+        }
     }
 
 .filter-tags {
     list-style-type: none;
+    padding-left: 0;
     @include grid(100);
+    text-align: center;
 }
     .filter-tag {
-        float: left;
+        display: inline-block;
         padding: $padding-sm $padding;
+        margin: rem-calc(3);
+        background-color: #eee;
+        &:hover {
+            background-color: darken(#eee, 5);
+            @include transition-duration(.3s);
+        }
     }

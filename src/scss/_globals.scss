@@ -1,13 +1,13 @@
-html,
-body {
+html {
     height: 100%;
-    font-size: 16px;
+    font-size: rem-calc(16);
+    @include box-sizing(border-box);
 }
 
 *,
 *:before,
 *:after {
-    @include box-sizing(border-box);
+    @include box-sizing(inherit);
 }
 
 body {
@@ -15,14 +15,16 @@ body {
         size: rem-calc(16);
         family: $body;
     }
-    line-height: 1.25;
+    line-height: 1.6;
     color: $dark;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    padding-bottom: rem-calc(73);
     position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
     @media #{$medium-up} {
         font-size: 110%;
-        line-height: 1.375;
     }
 }
 
@@ -128,7 +130,7 @@ header,
 
 .main-inner {
     @include grid-column(12);
-    // padding: $padding;
+     padding: $padding;
 }
 
 .disable-scrolling {

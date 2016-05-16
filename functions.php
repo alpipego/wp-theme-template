@@ -45,6 +45,13 @@ include 'functions/Excerpt.php';
 include 'functions/CleanContent.php';
 
 /**
+ * Image Handling
+ */
+
+include 'functions/LazyImages.php';
+include 'functions/CustomHeader.php';
+
+/**
  * Blog Index
  */
 
