@@ -46,6 +46,7 @@ jQuery(document).ready(function($) {
     });
 
     $(window).smartresize(function() {
+        $('#header-logo').attr('src', $('#header-logo').data('src') + '?width=' + $('#header-logo').width());
         if ($('#filter').hasClass('showing')) {
             $('#filter').css('height', $(window).outerHeight(true) - $('#filter').offset().top);
         }

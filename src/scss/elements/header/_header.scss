@@ -11,7 +11,17 @@ header {
 }
 
 .nav-fixed {
-    padding-bottom: rem-calc(102);
+    @include media(700) {
+        padding-bottom: rem-calc(102);
+    }
+}
+
+.header-logo {
+    padding: {
+        top: $padding-sm;
+        right: $padding * 1.5;
+        left: $padding * 1.5;
+    }
 }
 
 .nav {

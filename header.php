@@ -18,7 +18,7 @@
 
     <header>
         <a href="<?= get_bloginfo('url'); ?>">
-            <img src="" id="header-logo" data-src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+            <img src="" class="header-logo" id="header-logo" data-src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
         </a>
         <nav class="nav" id="nav">
             <ul class="main-nav">
