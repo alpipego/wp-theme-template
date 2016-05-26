@@ -1,0 +1,20 @@
+@mixin media($width, $upperBound: 33554428) {
+    $remWidth: 0;
+    $upperBoundWidth: 0;
+
+    @if unit($width) == 'px' or unit($width) == '' {
+        $remWidth: rem-calc($width);
+    } @else {
+        $remWidth: $width;
+    }
+
+    @if unit($upperBound) == 'px' or unit($upperBound) == '' {
+        $upperBoundWidth: rem-calc($upperBound);
+    } @else {
+        $upperBoundWidth: $upperBound;
+    }
+
+    @media ("only-screen") and (min-width: #{$remWidth}) and (max-width: #{$upperBoundWidth}) {
+        @content;
+    }
+}
