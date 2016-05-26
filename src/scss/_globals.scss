@@ -1,26 +1,28 @@
-html,
-body {
+$medium: rem-calc($medium);
+
+html{
+    box-sizing: border-box;
     height: 100%;
-    font-size: 16px;
 }
 
 *,
 *:before,
 *:after {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 body {
     font: {
-        size: rem-calc(16);
+        size: $rem-base;
         family: $body;
     }
-    line-height: 1.25;
+    line-height: $base-line-height;
     color: $dark;
-    padding: 0;
-    margin: 0;
     position: relative;
-    @media #{$medium-up} {
+    //padding: 0;
+    padding-bottom: rem-calc($footer-height);
+    margin: 0;
+    @include media($medium) {
         font-size: 110%;
         line-height: 1.375;
     }
@@ -50,21 +52,21 @@ h6 {
 
 h1 {
     font-size: rem-calc(32);
-    @media #{$medium-up} {
+    @include media($medium) {
         font-size: rem-calc(38);
     }
 }
 
 h2 {
     font-size: rem-calc(24);
-    @media #{$medium-up} {
+    @include media($medium) {
         font-size: rem-calc(28.8);
     }
 }
 
 h3 {
     font-size: rem-calc(22);
-    @media #{$medium-up} {
+    @include media($medium) {
         font-size: rem-calc(24);
     }
 }
@@ -90,7 +92,7 @@ ol {
     padding-left: $padding * 2;
     li {
         line-height: 1.25;
-        margin-bottom: $padding * .5;
+        margin-bottom: $padding-sm;
     }
 }
 
@@ -109,19 +111,53 @@ a {
 }
 
 aside {
-    @include grid-column(12);
+    @include grid(100);
 }
 
 section {
-    @include grid-column(12);
+    @include grid(100);
 }
 
 .main {
-    @include grid-row();
-    max-width: 1400px;
+    @include row();
 }
 
 .main-inner {
-    @include grid-column(12);
+    @include grid(100);
     padding: $padding;
+}
+
+.to-top {
+    display: block;
+    position: fixed;
+    right: $padding * 2;
+    bottom: $padding * 2;
+    max-height: rem-calc(40);
+    max-width: rem-calc(40);
+    height: 25vw;
+    width: 25vw;
+    a {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        vertical-align: middle;
+        &::before {
+            @include icon('angle-double-up');
+            vertical-align: inherit;
+            font-size: rem-calc(32);
+            line-height: 40px;
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: rem-calc($rem-base);
+    background-color: #efefef;
+    text-align: center;
 }

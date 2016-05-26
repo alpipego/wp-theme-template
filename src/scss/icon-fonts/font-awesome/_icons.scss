@@ -1,0 +1,697 @@
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+
+.#{$fa-css-prefix}-glass:before { content: map-get($font-awesome, glass); }
+.#{$fa-css-prefix}-music:before { content: map-get($font-awesome, music); }
+.#{$fa-css-prefix}-search:before { content: map-get($font-awesome, search); }
+.#{$fa-css-prefix}-envelope-o:before { content: map-get($font-awesome, envelope-o); }
+.#{$fa-css-prefix}-heart:before { content: map-get($font-awesome, heart); }
+.#{$fa-css-prefix}-star:before { content: map-get($font-awesome, star); }
+.#{$fa-css-prefix}-star-o:before { content: map-get($font-awesome, star-o); }
+.#{$fa-css-prefix}-user:before { content: map-get($font-awesome, user); }
+.#{$fa-css-prefix}-film:before { content: map-get($font-awesome, film); }
+.#{$fa-css-prefix}-th-large:before { content: map-get($font-awesome, th-large); }
+.#{$fa-css-prefix}-th:before { content: map-get($font-awesome, th); }
+.#{$fa-css-prefix}-th-list:before { content: map-get($font-awesome, th-list); }
+.#{$fa-css-prefix}-check:before { content: map-get($font-awesome, check); }
+.#{$fa-css-prefix}-remove:before,
+.#{$fa-css-prefix}-close:before,
+.#{$fa-css-prefix}-times:before { content: map-get($font-awesome, times); }
+.#{$fa-css-prefix}-search-plus:before { content: map-get($font-awesome, search-plus); }
+.#{$fa-css-prefix}-search-minus:before { content: map-get($font-awesome, search-minus); }
+.#{$fa-css-prefix}-power-off:before { content: map-get($font-awesome, power-off); }
+.#{$fa-css-prefix}-signal:before { content: map-get($font-awesome, signal); }
+.#{$fa-css-prefix}-gear:before,
+.#{$fa-css-prefix}-cog:before { content: map-get($font-awesome, cog); }
+.#{$fa-css-prefix}-trash-o:before { content: map-get($font-awesome, trash-o); }
+.#{$fa-css-prefix}-home:before { content: map-get($font-awesome, home); }
+.#{$fa-css-prefix}-file-o:before { content: map-get($font-awesome, file-o); }
+.#{$fa-css-prefix}-clock-o:before { content: map-get($font-awesome, clock-o); }
+.#{$fa-css-prefix}-road:before { content: map-get($font-awesome, road); }
+.#{$fa-css-prefix}-download:before { content: map-get($font-awesome, download); }
+.#{$fa-css-prefix}-arrow-circle-o-down:before { content: map-get($font-awesome, arrow-circle-o-down); }
+.#{$fa-css-prefix}-arrow-circle-o-up:before { content: map-get($font-awesome, arrow-circle-o-up); }
+.#{$fa-css-prefix}-inbox:before { content: map-get($font-awesome, inbox); }
+.#{$fa-css-prefix}-play-circle-o:before { content: map-get($font-awesome, play-circle-o); }
+.#{$fa-css-prefix}-rotate-right:before,
+.#{$fa-css-prefix}-repeat:before { content: map-get($font-awesome, repeat); }
+.#{$fa-css-prefix}-refresh:before { content: map-get($font-awesome, refresh); }
+.#{$fa-css-prefix}-list-alt:before { content: map-get($font-awesome, list-alt); }
+.#{$fa-css-prefix}-lock:before { content: map-get($font-awesome, lock); }
+.#{$fa-css-prefix}-flag:before { content: map-get($font-awesome, flag); }
+.#{$fa-css-prefix}-headphones:before { content: map-get($font-awesome, headphones); }
+.#{$fa-css-prefix}-volume-off:before { content: map-get($font-awesome, volume-off); }
+.#{$fa-css-prefix}-volume-down:before { content: map-get($font-awesome, volume-down); }
+.#{$fa-css-prefix}-volume-up:before { content: map-get($font-awesome, volume-up); }
+.#{$fa-css-prefix}-qrcode:before { content: map-get($font-awesome, qrcode); }
+.#{$fa-css-prefix}-barcode:before { content: map-get($font-awesome, barcode); }
+.#{$fa-css-prefix}-tag:before { content: map-get($font-awesome, tag); }
+.#{$fa-css-prefix}-tags:before { content: map-get($font-awesome, tags); }
+.#{$fa-css-prefix}-book:before { content: map-get($font-awesome, book); }
+.#{$fa-css-prefix}-bookmark:before { content: map-get($font-awesome, bookmark); }
+.#{$fa-css-prefix}-print:before { content: map-get($font-awesome, print); }
+.#{$fa-css-prefix}-camera:before { content: map-get($font-awesome, camera); }
+.#{$fa-css-prefix}-font:before { content: map-get($font-awesome, font); }
+.#{$fa-css-prefix}-bold:before { content: map-get($font-awesome, bold); }
+.#{$fa-css-prefix}-italic:before { content: map-get($font-awesome, italic); }
+.#{$fa-css-prefix}-text-height:before { content: map-get($font-awesome, text-height); }
+.#{$fa-css-prefix}-text-width:before { content: map-get($font-awesome, text-width); }
+.#{$fa-css-prefix}-align-left:before { content: map-get($font-awesome, align-left); }
+.#{$fa-css-prefix}-align-center:before { content: map-get($font-awesome, align-center); }
+.#{$fa-css-prefix}-align-right:before { content: map-get($font-awesome, align-right); }
+.#{$fa-css-prefix}-align-justify:before { content: map-get($font-awesome, align-justify); }
+.#{$fa-css-prefix}-list:before { content: map-get($font-awesome, list); }
+.#{$fa-css-prefix}-dedent:before,
+.#{$fa-css-prefix}-outdent:before { content: map-get($font-awesome, outdent); }
+.#{$fa-css-prefix}-indent:before { content: map-get($font-awesome, indent); }
+.#{$fa-css-prefix}-video-camera:before { content: map-get($font-awesome, video-camera); }
+.#{$fa-css-prefix}-photo:before,
+.#{$fa-css-prefix}-image:before,
+.#{$fa-css-prefix}-picture-o:before { content: map-get($font-awesome, picture-o); }
+.#{$fa-css-prefix}-pencil:before { content: map-get($font-awesome, pencil); }
+.#{$fa-css-prefix}-map-marker:before { content: map-get($font-awesome, map-marker); }
+.#{$fa-css-prefix}-adjust:before { content: map-get($font-awesome, adjust); }
+.#{$fa-css-prefix}-tint:before { content: map-get($font-awesome, tint); }
+.#{$fa-css-prefix}-edit:before,
+.#{$fa-css-prefix}-pencil-square-o:before { content: map-get($font-awesome, pencil-square-o); }
+.#{$fa-css-prefix}-share-square-o:before { content: map-get($font-awesome, share-square-o); }
+.#{$fa-css-prefix}-check-square-o:before { content: map-get($font-awesome, check-square-o); }
+.#{$fa-css-prefix}-arrows:before { content: map-get($font-awesome, arrows); }
+.#{$fa-css-prefix}-step-backward:before { content: map-get($font-awesome, step-backward); }
+.#{$fa-css-prefix}-fast-backward:before { content: map-get($font-awesome, fast-backward); }
+.#{$fa-css-prefix}-backward:before { content: map-get($font-awesome, backward); }
+.#{$fa-css-prefix}-play:before { content: map-get($font-awesome, play); }
+.#{$fa-css-prefix}-pause:before { content: map-get($font-awesome, pause); }
+.#{$fa-css-prefix}-stop:before { content: map-get($font-awesome, stop); }
+.#{$fa-css-prefix}-forward:before { content: map-get($font-awesome, forward); }
+.#{$fa-css-prefix}-fast-forward:before { content: map-get($font-awesome, fast-forward); }
+.#{$fa-css-prefix}-step-forward:before { content: map-get($font-awesome, step-forward); }
+.#{$fa-css-prefix}-eject:before { content: map-get($font-awesome, eject); }
+.#{$fa-css-prefix}-chevron-left:before { content: map-get($font-awesome, chevron-left); }
+.#{$fa-css-prefix}-chevron-right:before { content: map-get($font-awesome, chevron-right); }
+.#{$fa-css-prefix}-plus-circle:before { content: map-get($font-awesome, plus-circle); }
+.#{$fa-css-prefix}-minus-circle:before { content: map-get($font-awesome, minus-circle); }
+.#{$fa-css-prefix}-times-circle:before { content: map-get($font-awesome, times-circle); }
+.#{$fa-css-prefix}-check-circle:before { content: map-get($font-awesome, check-circle); }
+.#{$fa-css-prefix}-question-circle:before { content: map-get($font-awesome, question-circle); }
+.#{$fa-css-prefix}-info-circle:before { content: map-get($font-awesome, info-circle); }
+.#{$fa-css-prefix}-crosshairs:before { content: map-get($font-awesome, crosshairs); }
+.#{$fa-css-prefix}-times-circle-o:before { content: map-get($font-awesome, times-circle-o); }
+.#{$fa-css-prefix}-check-circle-o:before { content: map-get($font-awesome, check-circle-o); }
+.#{$fa-css-prefix}-ban:before { content: map-get($font-awesome, ban); }
+.#{$fa-css-prefix}-arrow-left:before { content: map-get($font-awesome, arrow-left); }
+.#{$fa-css-prefix}-arrow-right:before { content: map-get($font-awesome, arrow-right); }
+.#{$fa-css-prefix}-arrow-up:before { content: map-get($font-awesome, arrow-up); }
+.#{$fa-css-prefix}-arrow-down:before { content: map-get($font-awesome, arrow-down); }
+.#{$fa-css-prefix}-mail-forward:before,
+.#{$fa-css-prefix}-share:before { content: map-get($font-awesome, share); }
+.#{$fa-css-prefix}-expand:before { content: map-get($font-awesome, expand); }
+.#{$fa-css-prefix}-compress:before { content: map-get($font-awesome, compress); }
+.#{$fa-css-prefix}-plus:before { content: map-get($font-awesome, plus); }
+.#{$fa-css-prefix}-minus:before { content: map-get($font-awesome, minus); }
+.#{$fa-css-prefix}-asterisk:before { content: map-get($font-awesome, asterisk); }
+.#{$fa-css-prefix}-exclamation-circle:before { content: map-get($font-awesome, exclamation-circle); }
+.#{$fa-css-prefix}-gift:before { content: map-get($font-awesome, gift); }
+.#{$fa-css-prefix}-leaf:before { content: map-get($font-awesome, leaf); }
+.#{$fa-css-prefix}-fire:before { content: map-get($font-awesome, fire); }
+.#{$fa-css-prefix}-eye:before { content: map-get($font-awesome, eye); }
+.#{$fa-css-prefix}-eye-slash:before { content: map-get($font-awesome, eye-slash); }
+.#{$fa-css-prefix}-warning:before,
+.#{$fa-css-prefix}-exclamation-triangle:before { content: map-get($font-awesome, exclamation-triangle); }
+.#{$fa-css-prefix}-plane:before { content: map-get($font-awesome, plane); }
+.#{$fa-css-prefix}-calendar:before { content: map-get($font-awesome, calendar); }
+.#{$fa-css-prefix}-random:before { content: map-get($font-awesome, random); }
+.#{$fa-css-prefix}-comment:before { content: map-get($font-awesome, comment); }
+.#{$fa-css-prefix}-magnet:before { content: map-get($font-awesome, magnet); }
+.#{$fa-css-prefix}-chevron-up:before { content: map-get($font-awesome, chevron-up); }
+.#{$fa-css-prefix}-chevron-down:before { content: map-get($font-awesome, chevron-down); }
+.#{$fa-css-prefix}-retweet:before { content: map-get($font-awesome, retweet); }
+.#{$fa-css-prefix}-shopping-cart:before { content: map-get($font-awesome, shopping-cart); }
+.#{$fa-css-prefix}-folder:before { content: map-get($font-awesome, folder); }
+.#{$fa-css-prefix}-folder-open:before { content: map-get($font-awesome, folder-open); }
+.#{$fa-css-prefix}-arrows-v:before { content: map-get($font-awesome, arrows-v); }
+.#{$fa-css-prefix}-arrows-h:before { content: map-get($font-awesome, arrows-h); }
+.#{$fa-css-prefix}-bar-chart-o:before,
+.#{$fa-css-prefix}-bar-chart:before { content: map-get($font-awesome, bar-chart); }
+.#{$fa-css-prefix}-twitter-square:before { content: map-get($font-awesome, twitter-square); }
+.#{$fa-css-prefix}-facebook-square:before { content: map-get($font-awesome, facebook-square); }
+.#{$fa-css-prefix}-camera-retro:before { content: map-get($font-awesome, camera-retro); }
+.#{$fa-css-prefix}-key:before { content: map-get($font-awesome, key); }
+.#{$fa-css-prefix}-gears:before,
+.#{$fa-css-prefix}-cogs:before { content: map-get($font-awesome, cogs); }
+.#{$fa-css-prefix}-comments:before { content: map-get($font-awesome, comments); }
+.#{$fa-css-prefix}-thumbs-o-up:before { content: map-get($font-awesome, thumbs-o-up); }
+.#{$fa-css-prefix}-thumbs-o-down:before { content: map-get($font-awesome, thumbs-o-down); }
+.#{$fa-css-prefix}-star-half:before { content: map-get($font-awesome, star-half); }
+.#{$fa-css-prefix}-heart-o:before { content: map-get($font-awesome, heart-o); }
+.#{$fa-css-prefix}-sign-out:before { content: map-get($font-awesome, sign-out); }
+.#{$fa-css-prefix}-linkedin-square:before { content: map-get($font-awesome, linkedin-square); }
+.#{$fa-css-prefix}-thumb-tack:before { content: map-get($font-awesome, thumb-tack); }
+.#{$fa-css-prefix}-external-link:before { content: map-get($font-awesome, external-link); }
+.#{$fa-css-prefix}-sign-in:before { content: map-get($font-awesome, sign-in); }
+.#{$fa-css-prefix}-trophy:before { content: map-get($font-awesome, trophy); }
+.#{$fa-css-prefix}-github-square:before { content: map-get($font-awesome, github-square); }
+.#{$fa-css-prefix}-upload:before { content: map-get($font-awesome, upload); }
+.#{$fa-css-prefix}-lemon-o:before { content: map-get($font-awesome, lemon-o); }
+.#{$fa-css-prefix}-phone:before { content: map-get($font-awesome, phone); }
+.#{$fa-css-prefix}-square-o:before { content: map-get($font-awesome, square-o); }
+.#{$fa-css-prefix}-bookmark-o:before { content: map-get($font-awesome, bookmark-o); }
+.#{$fa-css-prefix}-phone-square:before { content: map-get($font-awesome, phone-square); }
+.#{$fa-css-prefix}-twitter:before { content: map-get($font-awesome, twitter); }
+.#{$fa-css-prefix}-facebook-f:before,
+.#{$fa-css-prefix}-facebook:before { content: map-get($font-awesome, facebook); }
+.#{$fa-css-prefix}-github:before { content: map-get($font-awesome, github); }
+.#{$fa-css-prefix}-unlock:before { content: map-get($font-awesome, unlock); }
+.#{$fa-css-prefix}-credit-card:before { content: map-get($font-awesome, credit-card); }
+.#{$fa-css-prefix}-feed:before,
+.#{$fa-css-prefix}-rss:before { content: map-get($font-awesome, rss); }
+.#{$fa-css-prefix}-hdd-o:before { content: map-get($font-awesome, hdd-o); }
+.#{$fa-css-prefix}-bullhorn:before { content: map-get($font-awesome, bullhorn); }
+.#{$fa-css-prefix}-bell:before { content: map-get($font-awesome, bell); }
+.#{$fa-css-prefix}-certificate:before { content: map-get($font-awesome, certificate); }
+.#{$fa-css-prefix}-hand-o-right:before { content: map-get($font-awesome, hand-o-right); }
+.#{$fa-css-prefix}-hand-o-left:before { content: map-get($font-awesome, hand-o-left); }
+.#{$fa-css-prefix}-hand-o-up:before { content: map-get($font-awesome, hand-o-up); }
+.#{$fa-css-prefix}-hand-o-down:before { content: map-get($font-awesome, hand-o-down); }
+.#{$fa-css-prefix}-arrow-circle-left:before { content: map-get($font-awesome, arrow-circle-left); }
+.#{$fa-css-prefix}-arrow-circle-right:before { content: map-get($font-awesome, arrow-circle-right); }
+.#{$fa-css-prefix}-arrow-circle-up:before { content: map-get($font-awesome, arrow-circle-up); }
+.#{$fa-css-prefix}-arrow-circle-down:before { content: map-get($font-awesome, arrow-circle-down); }
+.#{$fa-css-prefix}-globe:before { content: map-get($font-awesome, globe); }
+.#{$fa-css-prefix}-wrench:before { content: map-get($font-awesome, wrench); }
+.#{$fa-css-prefix}-tasks:before { content: map-get($font-awesome, tasks); }
+.#{$fa-css-prefix}-filter:before { content: map-get($font-awesome, filter); }
+.#{$fa-css-prefix}-briefcase:before { content: map-get($font-awesome, briefcase); }
+.#{$fa-css-prefix}-arrows-alt:before { content: map-get($font-awesome, arrows-alt); }
+.#{$fa-css-prefix}-group:before,
+.#{$fa-css-prefix}-users:before { content: map-get($font-awesome, users); }
+.#{$fa-css-prefix}-chain:before,
+.#{$fa-css-prefix}-link:before { content: map-get($font-awesome, link); }
+.#{$fa-css-prefix}-cloud:before { content: map-get($font-awesome, cloud); }
+.#{$fa-css-prefix}-flask:before { content: map-get($font-awesome, flask); }
+.#{$fa-css-prefix}-cut:before,
+.#{$fa-css-prefix}-scissors:before { content: map-get($font-awesome, scissors); }
+.#{$fa-css-prefix}-copy:before,
+.#{$fa-css-prefix}-files-o:before { content: map-get($font-awesome, files-o); }
+.#{$fa-css-prefix}-paperclip:before { content: map-get($font-awesome, paperclip); }
+.#{$fa-css-prefix}-save:before,
+.#{$fa-css-prefix}-floppy-o:before { content: map-get($font-awesome, floppy-o); }
+.#{$fa-css-prefix}-square:before { content: map-get($font-awesome, square); }
+.#{$fa-css-prefix}-navicon:before,
+.#{$fa-css-prefix}-reorder:before,
+.#{$fa-css-prefix}-bars:before { content: map-get($font-awesome, bars); }
+.#{$fa-css-prefix}-list-ul:before { content: map-get($font-awesome, list-ul); }
+.#{$fa-css-prefix}-list-ol:before { content: map-get($font-awesome, list-ol); }
+.#{$fa-css-prefix}-strikethrough:before { content: map-get($font-awesome, strikethrough); }
+.#{$fa-css-prefix}-underline:before { content: map-get($font-awesome, underline); }
+.#{$fa-css-prefix}-table:before { content: map-get($font-awesome, table); }
+.#{$fa-css-prefix}-magic:before { content: map-get($font-awesome, magic); }
+.#{$fa-css-prefix}-truck:before { content: map-get($font-awesome, truck); }
+.#{$fa-css-prefix}-pinterest:before { content: map-get($font-awesome, pinterest); }
+.#{$fa-css-prefix}-pinterest-square:before { content: map-get($font-awesome, pinterest-square); }
+.#{$fa-css-prefix}-google-plus-square:before { content: map-get($font-awesome, google-plus-square); }
+.#{$fa-css-prefix}-google-plus:before { content: map-get($font-awesome, google-plus); }
+.#{$fa-css-prefix}-money:before { content: map-get($font-awesome, money); }
+.#{$fa-css-prefix}-caret-down:before { content: map-get($font-awesome, caret-down); }
+.#{$fa-css-prefix}-caret-up:before { content: map-get($font-awesome, caret-up); }
+.#{$fa-css-prefix}-caret-left:before { content: map-get($font-awesome, caret-left); }
+.#{$fa-css-prefix}-caret-right:before { content: map-get($font-awesome, caret-right); }
+.#{$fa-css-prefix}-columns:before { content: map-get($font-awesome, columns); }
+.#{$fa-css-prefix}-unsorted:before,
+.#{$fa-css-prefix}-sort:before { content: map-get($font-awesome, sort); }
+.#{$fa-css-prefix}-sort-down:before,
+.#{$fa-css-prefix}-sort-desc:before { content: map-get($font-awesome, sort-desc); }
+.#{$fa-css-prefix}-sort-up:before,
+.#{$fa-css-prefix}-sort-asc:before { content: map-get($font-awesome, sort-asc); }
+.#{$fa-css-prefix}-envelope:before { content: map-get($font-awesome, envelope); }
+.#{$fa-css-prefix}-linkedin:before { content: map-get($font-awesome, linkedin); }
+.#{$fa-css-prefix}-rotate-left:before,
+.#{$fa-css-prefix}-undo:before { content: map-get($font-awesome, undo); }
+.#{$fa-css-prefix}-legal:before,
+.#{$fa-css-prefix}-gavel:before { content: map-get($font-awesome, gavel); }
+.#{$fa-css-prefix}-dashboard:before,
+.#{$fa-css-prefix}-tachometer:before { content: map-get($font-awesome, tachometer); }
+.#{$fa-css-prefix}-comment-o:before { content: map-get($font-awesome, comment-o); }
+.#{$fa-css-prefix}-comments-o:before { content: map-get($font-awesome, comments-o); }
+.#{$fa-css-prefix}-flash:before,
+.#{$fa-css-prefix}-bolt:before { content: map-get($font-awesome, bolt); }
+.#{$fa-css-prefix}-sitemap:before { content: map-get($font-awesome, sitemap); }
+.#{$fa-css-prefix}-umbrella:before { content: map-get($font-awesome, umbrella); }
+.#{$fa-css-prefix}-paste:before,
+.#{$fa-css-prefix}-clipboard:before { content: map-get($font-awesome, clipboard); }
+.#{$fa-css-prefix}-lightbulb-o:before { content: map-get($font-awesome, lightbulb-o); }
+.#{$fa-css-prefix}-exchange:before { content: map-get($font-awesome, exchange); }
+.#{$fa-css-prefix}-cloud-download:before { content: map-get($font-awesome, cloud-download); }
+.#{$fa-css-prefix}-cloud-upload:before { content: map-get($font-awesome, cloud-upload); }
+.#{$fa-css-prefix}-user-md:before { content: map-get($font-awesome, user-md); }
+.#{$fa-css-prefix}-stethoscope:before { content: map-get($font-awesome, stethoscope); }
+.#{$fa-css-prefix}-suitcase:before { content: map-get($font-awesome, suitcase); }
+.#{$fa-css-prefix}-bell-o:before { content: map-get($font-awesome, bell-o); }
+.#{$fa-css-prefix}-coffee:before { content: map-get($font-awesome, coffee); }
+.#{$fa-css-prefix}-cutlery:before { content: map-get($font-awesome, cutlery); }
+.#{$fa-css-prefix}-file-text-o:before { content: map-get($font-awesome, file-text-o); }
+.#{$fa-css-prefix}-building-o:before { content: map-get($font-awesome, building-o); }
+.#{$fa-css-prefix}-hospital-o:before { content: map-get($font-awesome, hospital-o); }
+.#{$fa-css-prefix}-ambulance:before { content: map-get($font-awesome, ambulance); }
+.#{$fa-css-prefix}-medkit:before { content: map-get($font-awesome, medkit); }
+.#{$fa-css-prefix}-fighter-jet:before { content: map-get($font-awesome, fighter-jet); }
+.#{$fa-css-prefix}-beer:before { content: map-get($font-awesome, beer); }
+.#{$fa-css-prefix}-h-square:before { content: map-get($font-awesome, h-square); }
+.#{$fa-css-prefix}-plus-square:before { content: map-get($font-awesome, plus-square); }
+.#{$fa-css-prefix}-angle-double-left:before { content: map-get($font-awesome, angle-double-left); }
+.#{$fa-css-prefix}-angle-double-right:before { content: map-get($font-awesome, angle-double-right); }
+.#{$fa-css-prefix}-angle-double-up:before { content: map-get($font-awesome, angle-double-up); }
+.#{$fa-css-prefix}-angle-double-down:before { content: map-get($font-awesome, angle-double-down); }
+.#{$fa-css-prefix}-angle-left:before { content: map-get($font-awesome, angle-left); }
+.#{$fa-css-prefix}-angle-right:before { content: map-get($font-awesome, angle-right); }
+.#{$fa-css-prefix}-angle-up:before { content: map-get($font-awesome, angle-up); }
+.#{$fa-css-prefix}-angle-down:before { content: map-get($font-awesome, angle-down); }
+.#{$fa-css-prefix}-desktop:before { content: map-get($font-awesome, desktop); }
+.#{$fa-css-prefix}-laptop:before { content: map-get($font-awesome, laptop); }
+.#{$fa-css-prefix}-tablet:before { content: map-get($font-awesome, tablet); }
+.#{$fa-css-prefix}-mobile-phone:before,
+.#{$fa-css-prefix}-mobile:before { content: map-get($font-awesome, mobile); }
+.#{$fa-css-prefix}-circle-o:before { content: map-get($font-awesome, circle-o); }
+.#{$fa-css-prefix}-quote-left:before { content: map-get($font-awesome, quote-left); }
+.#{$fa-css-prefix}-quote-right:before { content: map-get($font-awesome, quote-right); }
+.#{$fa-css-prefix}-spinner:before { content: map-get($font-awesome, spinner); }
+.#{$fa-css-prefix}-circle:before { content: map-get($font-awesome, circle); }
+.#{$fa-css-prefix}-mail-reply:before,
+.#{$fa-css-prefix}-reply:before { content: map-get($font-awesome, reply); }
+.#{$fa-css-prefix}-github-alt:before { content: map-get($font-awesome, github-alt); }
+.#{$fa-css-prefix}-folder-o:before { content: map-get($font-awesome, folder-o); }
+.#{$fa-css-prefix}-folder-open-o:before { content: map-get($font-awesome, folder-open-o); }
+.#{$fa-css-prefix}-smile-o:before { content: map-get($font-awesome, smile-o); }
+.#{$fa-css-prefix}-frown-o:before { content: map-get($font-awesome, frown-o); }
+.#{$fa-css-prefix}-meh-o:before { content: map-get($font-awesome, meh-o); }
+.#{$fa-css-prefix}-gamepad:before { content: map-get($font-awesome, gamepad); }
+.#{$fa-css-prefix}-keyboard-o:before { content: map-get($font-awesome, keyboard-o); }
+.#{$fa-css-prefix}-flag-o:before { content: map-get($font-awesome, flag-o); }
+.#{$fa-css-prefix}-flag-checkered:before { content: map-get($font-awesome, flag-checkered); }
+.#{$fa-css-prefix}-terminal:before { content: map-get($font-awesome, terminal); }
+.#{$fa-css-prefix}-code:before { content: map-get($font-awesome, code); }
+.#{$fa-css-prefix}-mail-reply-all:before,
+.#{$fa-css-prefix}-reply-all:before { content: map-get($font-awesome, reply-all); }
+.#{$fa-css-prefix}-star-half-empty:before,
+.#{$fa-css-prefix}-star-half-full:before,
+.#{$fa-css-prefix}-star-half-o:before { content: map-get($font-awesome, star-half-o); }
+.#{$fa-css-prefix}-location-arrow:before { content: map-get($font-awesome, location-arrow); }
+.#{$fa-css-prefix}-crop:before { content: map-get($font-awesome, crop); }
+.#{$fa-css-prefix}-code-fork:before { content: map-get($font-awesome, code-fork); }
+.#{$fa-css-prefix}-unlink:before,
+.#{$fa-css-prefix}-chain-broken:before { content: map-get($font-awesome, chain-broken); }
+.#{$fa-css-prefix}-question:before { content: map-get($font-awesome, question); }
+.#{$fa-css-prefix}-info:before { content: map-get($font-awesome, info); }
+.#{$fa-css-prefix}-exclamation:before { content: map-get($font-awesome, exclamation); }
+.#{$fa-css-prefix}-superscript:before { content: map-get($font-awesome, superscript); }
+.#{$fa-css-prefix}-subscript:before { content: map-get($font-awesome, subscript); }
+.#{$fa-css-prefix}-eraser:before { content: map-get($font-awesome, eraser); }
+.#{$fa-css-prefix}-puzzle-piece:before { content: map-get($font-awesome, puzzle-piece); }
+.#{$fa-css-prefix}-microphone:before { content: map-get($font-awesome, microphone); }
+.#{$fa-css-prefix}-microphone-slash:before { content: map-get($font-awesome, microphone-slash); }
+.#{$fa-css-prefix}-shield:before { content: map-get($font-awesome, shield); }
+.#{$fa-css-prefix}-calendar-o:before { content: map-get($font-awesome, calendar-o); }
+.#{$fa-css-prefix}-fire-extinguisher:before { content: map-get($font-awesome, fire-extinguisher); }
+.#{$fa-css-prefix}-rocket:before { content: map-get($font-awesome, rocket); }
+.#{$fa-css-prefix}-maxcdn:before { content: map-get($font-awesome, maxcdn); }
+.#{$fa-css-prefix}-chevron-circle-left:before { content: map-get($font-awesome, chevron-circle-left); }
+.#{$fa-css-prefix}-chevron-circle-right:before { content: map-get($font-awesome, chevron-circle-right); }
+.#{$fa-css-prefix}-chevron-circle-up:before { content: map-get($font-awesome, chevron-circle-up); }
+.#{$fa-css-prefix}-chevron-circle-down:before { content: map-get($font-awesome, chevron-circle-down); }
+.#{$fa-css-prefix}-html5:before { content: map-get($font-awesome, html5); }
+.#{$fa-css-prefix}-css3:before { content: map-get($font-awesome, css3); }
+.#{$fa-css-prefix}-anchor:before { content: map-get($font-awesome, anchor); }
+.#{$fa-css-prefix}-unlock-alt:before { content: map-get($font-awesome, unlock-alt); }
+.#{$fa-css-prefix}-bullseye:before { content: map-get($font-awesome, bullseye); }
+.#{$fa-css-prefix}-ellipsis-h:before { content: map-get($font-awesome, ellipsis-h); }
+.#{$fa-css-prefix}-ellipsis-v:before { content: map-get($font-awesome, ellipsis-v); }
+.#{$fa-css-prefix}-rss-square:before { content: map-get($font-awesome, rss-square); }
+.#{$fa-css-prefix}-play-circle:before { content: map-get($font-awesome, play-circle); }
+.#{$fa-css-prefix}-ticket:before { content: map-get($font-awesome, ticket); }
+.#{$fa-css-prefix}-minus-square:before { content: map-get($font-awesome, minus-square); }
+.#{$fa-css-prefix}-minus-square-o:before { content: map-get($font-awesome, minus-square-o); }
+.#{$fa-css-prefix}-level-up:before { content: map-get($font-awesome, level-up); }
+.#{$fa-css-prefix}-level-down:before { content: map-get($font-awesome, level-down); }
+.#{$fa-css-prefix}-check-square:before { content: map-get($font-awesome, check-square); }
+.#{$fa-css-prefix}-pencil-square:before { content: map-get($font-awesome, pencil-square); }
+.#{$fa-css-prefix}-external-link-square:before { content: map-get($font-awesome, external-link-square); }
+.#{$fa-css-prefix}-share-square:before { content: map-get($font-awesome, share-square); }
+.#{$fa-css-prefix}-compass:before { content: map-get($font-awesome, compass); }
+.#{$fa-css-prefix}-toggle-down:before,
+.#{$fa-css-prefix}-caret-square-o-down:before { content: map-get($font-awesome, caret-square-o-down); }
+.#{$fa-css-prefix}-toggle-up:before,
+.#{$fa-css-prefix}-caret-square-o-up:before { content: map-get($font-awesome, caret-square-o-up); }
+.#{$fa-css-prefix}-toggle-right:before,
+.#{$fa-css-prefix}-caret-square-o-right:before { content: map-get($font-awesome, caret-square-o-right); }
+.#{$fa-css-prefix}-euro:before,
+.#{$fa-css-prefix}-eur:before { content: map-get($font-awesome, eur); }
+.#{$fa-css-prefix}-gbp:before { content: map-get($font-awesome, gbp); }
+.#{$fa-css-prefix}-dollar:before,
+.#{$fa-css-prefix}-usd:before { content: map-get($font-awesome, usd); }
+.#{$fa-css-prefix}-rupee:before,
+.#{$fa-css-prefix}-inr:before { content: map-get($font-awesome, inr); }
+.#{$fa-css-prefix}-cny:before,
+.#{$fa-css-prefix}-rmb:before,
+.#{$fa-css-prefix}-yen:before,
+.#{$fa-css-prefix}-jpy:before { content: map-get($font-awesome, jpy); }
+.#{$fa-css-prefix}-ruble:before,
+.#{$fa-css-prefix}-rouble:before,
+.#{$fa-css-prefix}-rub:before { content: map-get($font-awesome, rub); }
+.#{$fa-css-prefix}-won:before,
+.#{$fa-css-prefix}-krw:before { content: map-get($font-awesome, krw); }
+.#{$fa-css-prefix}-bitcoin:before,
+.#{$fa-css-prefix}-btc:before { content: map-get($font-awesome, btc); }
+.#{$fa-css-prefix}-file:before { content: map-get($font-awesome, file); }
+.#{$fa-css-prefix}-file-text:before { content: map-get($font-awesome, file-text); }
+.#{$fa-css-prefix}-sort-alpha-asc:before { content: map-get($font-awesome, sort-alpha-asc); }
+.#{$fa-css-prefix}-sort-alpha-desc:before { content: map-get($font-awesome, sort-alpha-desc); }
+.#{$fa-css-prefix}-sort-amount-asc:before { content: map-get($font-awesome, sort-amount-asc); }
+.#{$fa-css-prefix}-sort-amount-desc:before { content: map-get($font-awesome, sort-amount-desc); }
+.#{$fa-css-prefix}-sort-numeric-asc:before { content: map-get($font-awesome, sort-numeric-asc); }
+.#{$fa-css-prefix}-sort-numeric-desc:before { content: map-get($font-awesome, sort-numeric-desc); }
+.#{$fa-css-prefix}-thumbs-up:before { content: map-get($font-awesome, thumbs-up); }
+.#{$fa-css-prefix}-thumbs-down:before { content: map-get($font-awesome, thumbs-down); }
+.#{$fa-css-prefix}-youtube-square:before { content: map-get($font-awesome, youtube-square); }
+.#{$fa-css-prefix}-youtube:before { content: map-get($font-awesome, youtube); }
+.#{$fa-css-prefix}-xing:before { content: map-get($font-awesome, xing); }
+.#{$fa-css-prefix}-xing-square:before { content: map-get($font-awesome, xing-square); }
+.#{$fa-css-prefix}-youtube-play:before { content: map-get($font-awesome, youtube-play); }
+.#{$fa-css-prefix}-dropbox:before { content: map-get($font-awesome, dropbox); }
+.#{$fa-css-prefix}-stack-overflow:before { content: map-get($font-awesome, stack-overflow); }
+.#{$fa-css-prefix}-instagram:before { content: map-get($font-awesome, instagram); }
+.#{$fa-css-prefix}-flickr:before { content: map-get($font-awesome, flickr); }
+.#{$fa-css-prefix}-adn:before { content: map-get($font-awesome, adn); }
+.#{$fa-css-prefix}-bitbucket:before { content: map-get($font-awesome, bitbucket); }
+.#{$fa-css-prefix}-bitbucket-square:before { content: map-get($font-awesome, bitbucket-square); }
+.#{$fa-css-prefix}-tumblr:before { content: map-get($font-awesome, tumblr); }
+.#{$fa-css-prefix}-tumblr-square:before { content: map-get($font-awesome, tumblr-square); }
+.#{$fa-css-prefix}-long-arrow-down:before { content: map-get($font-awesome, long-arrow-down); }
+.#{$fa-css-prefix}-long-arrow-up:before { content: map-get($font-awesome, long-arrow-up); }
+.#{$fa-css-prefix}-long-arrow-left:before { content: map-get($font-awesome, long-arrow-left); }
+.#{$fa-css-prefix}-long-arrow-right:before { content: map-get($font-awesome, long-arrow-right); }
+.#{$fa-css-prefix}-apple:before { content: map-get($font-awesome, apple); }
+.#{$fa-css-prefix}-windows:before { content: map-get($font-awesome, windows); }
+.#{$fa-css-prefix}-android:before { content: map-get($font-awesome, android); }
+.#{$fa-css-prefix}-linux:before { content: map-get($font-awesome, linux); }
+.#{$fa-css-prefix}-dribbble:before { content: map-get($font-awesome, dribbble); }
+.#{$fa-css-prefix}-skype:before { content: map-get($font-awesome, skype); }
+.#{$fa-css-prefix}-foursquare:before { content: map-get($font-awesome, foursquare); }
+.#{$fa-css-prefix}-trello:before { content: map-get($font-awesome, trello); }
+.#{$fa-css-prefix}-female:before { content: map-get($font-awesome, female); }
+.#{$fa-css-prefix}-male:before { content: map-get($font-awesome, male); }
+.#{$fa-css-prefix}-gittip:before,
+.#{$fa-css-prefix}-gratipay:before { content: map-get($font-awesome, gratipay); }
+.#{$fa-css-prefix}-sun-o:before { content: map-get($font-awesome, sun-o); }
+.#{$fa-css-prefix}-moon-o:before { content: map-get($font-awesome, moon-o); }
+.#{$fa-css-prefix}-archive:before { content: map-get($font-awesome, archive); }
+.#{$fa-css-prefix}-bug:before { content: map-get($font-awesome, bug); }
+.#{$fa-css-prefix}-vk:before { content: map-get($font-awesome, vk); }
+.#{$fa-css-prefix}-weibo:before { content: map-get($font-awesome, weibo); }
+.#{$fa-css-prefix}-renren:before { content: map-get($font-awesome, renren); }
+.#{$fa-css-prefix}-pagelines:before { content: map-get($font-awesome, pagelines); }
+.#{$fa-css-prefix}-stack-exchange:before { content: map-get($font-awesome, stack-exchange); }
+.#{$fa-css-prefix}-arrow-circle-o-right:before { content: map-get($font-awesome, arrow-circle-o-right); }
+.#{$fa-css-prefix}-arrow-circle-o-left:before { content: map-get($font-awesome, arrow-circle-o-left); }
+.#{$fa-css-prefix}-toggle-left:before,
+.#{$fa-css-prefix}-caret-square-o-left:before { content: map-get($font-awesome, caret-square-o-left); }
+.#{$fa-css-prefix}-dot-circle-o:before { content: map-get($font-awesome, dot-circle-o); }
+.#{$fa-css-prefix}-wheelchair:before { content: map-get($font-awesome, wheelchair); }
+.#{$fa-css-prefix}-vimeo-square:before { content: map-get($font-awesome, vimeo-square); }
+.#{$fa-css-prefix}-turkish-lira:before,
+.#{$fa-css-prefix}-try:before { content: map-get($font-awesome, try); }
+.#{$fa-css-prefix}-plus-square-o:before { content: map-get($font-awesome, plus-square-o); }
+.#{$fa-css-prefix}-space-shuttle:before { content: map-get($font-awesome, space-shuttle); }
+.#{$fa-css-prefix}-slack:before { content: map-get($font-awesome, slack); }
+.#{$fa-css-prefix}-envelope-square:before { content: map-get($font-awesome, envelope-square); }
+.#{$fa-css-prefix}-wordpress:before { content: map-get($font-awesome, wordpress); }
+.#{$fa-css-prefix}-openid:before { content: map-get($font-awesome, openid); }
+.#{$fa-css-prefix}-institution:before,
+.#{$fa-css-prefix}-bank:before,
+.#{$fa-css-prefix}-university:before { content: map-get($font-awesome, university); }
+.#{$fa-css-prefix}-mortar-board:before,
+.#{$fa-css-prefix}-graduation-cap:before { content: map-get($font-awesome, graduation-cap); }
+.#{$fa-css-prefix}-yahoo:before { content: map-get($font-awesome, yahoo); }
+.#{$fa-css-prefix}-google:before { content: map-get($font-awesome, google); }
+.#{$fa-css-prefix}-reddit:before { content: map-get($font-awesome, reddit); }
+.#{$fa-css-prefix}-reddit-square:before { content: map-get($font-awesome, reddit-square); }
+.#{$fa-css-prefix}-stumbleupon-circle:before { content: map-get($font-awesome, stumbleupon-circle); }
+.#{$fa-css-prefix}-stumbleupon:before { content: map-get($font-awesome, stumbleupon); }
+.#{$fa-css-prefix}-delicious:before { content: map-get($font-awesome, delicious); }
+.#{$fa-css-prefix}-digg:before { content: map-get($font-awesome, digg); }
+.#{$fa-css-prefix}-pied-piper:before { content: map-get($font-awesome, pied-piper); }
+.#{$fa-css-prefix}-pied-piper-alt:before { content: map-get($font-awesome, pied-piper-alt); }
+.#{$fa-css-prefix}-drupal:before { content: map-get($font-awesome, drupal); }
+.#{$fa-css-prefix}-joomla:before { content: map-get($font-awesome, joomla); }
+.#{$fa-css-prefix}-language:before { content: map-get($font-awesome, language); }
+.#{$fa-css-prefix}-fax:before { content: map-get($font-awesome, fax); }
+.#{$fa-css-prefix}-building:before { content: map-get($font-awesome, building); }
+.#{$fa-css-prefix}-child:before { content: map-get($font-awesome, child); }
+.#{$fa-css-prefix}-paw:before { content: map-get($font-awesome, paw); }
+.#{$fa-css-prefix}-spoon:before { content: map-get($font-awesome, spoon); }
+.#{$fa-css-prefix}-cube:before { content: map-get($font-awesome, cube); }
+.#{$fa-css-prefix}-cubes:before { content: map-get($font-awesome, cubes); }
+.#{$fa-css-prefix}-behance:before { content: map-get($font-awesome, behance); }
+.#{$fa-css-prefix}-behance-square:before { content: map-get($font-awesome, behance-square); }
+.#{$fa-css-prefix}-steam:before { content: map-get($font-awesome, steam); }
+.#{$fa-css-prefix}-steam-square:before { content: map-get($font-awesome, steam-square); }
+.#{$fa-css-prefix}-recycle:before { content: map-get($font-awesome, recycle); }
+.#{$fa-css-prefix}-automobile:before,
+.#{$fa-css-prefix}-car:before { content: map-get($font-awesome, car); }
+.#{$fa-css-prefix}-cab:before,
+.#{$fa-css-prefix}-taxi:before { content: map-get($font-awesome, taxi); }
+.#{$fa-css-prefix}-tree:before { content: map-get($font-awesome, tree); }
+.#{$fa-css-prefix}-spotify:before { content: map-get($font-awesome, spotify); }
+.#{$fa-css-prefix}-deviantart:before { content: map-get($font-awesome, deviantart); }
+.#{$fa-css-prefix}-soundcloud:before { content: map-get($font-awesome, soundcloud); }
+.#{$fa-css-prefix}-database:before { content: map-get($font-awesome, database); }
+.#{$fa-css-prefix}-file-pdf-o:before { content: map-get($font-awesome, file-pdf-o); }
+.#{$fa-css-prefix}-file-word-o:before { content: map-get($font-awesome, file-word-o); }
+.#{$fa-css-prefix}-file-excel-o:before { content: map-get($font-awesome, file-excel-o); }
+.#{$fa-css-prefix}-file-powerpoint-o:before { content: map-get($font-awesome, file-powerpoint-o); }
+.#{$fa-css-prefix}-file-photo-o:before,
+.#{$fa-css-prefix}-file-picture-o:before,
+.#{$fa-css-prefix}-file-image-o:before { content: map-get($font-awesome, file-image-o); }
+.#{$fa-css-prefix}-file-zip-o:before,
+.#{$fa-css-prefix}-file-archive-o:before { content: map-get($font-awesome, file-archive-o); }
+.#{$fa-css-prefix}-file-sound-o:before,
+.#{$fa-css-prefix}-file-audio-o:before { content: map-get($font-awesome, file-audio-o); }
+.#{$fa-css-prefix}-file-movie-o:before,
+.#{$fa-css-prefix}-file-video-o:before { content: map-get($font-awesome, file-video-o); }
+.#{$fa-css-prefix}-file-code-o:before { content: map-get($font-awesome, file-code-o); }
+.#{$fa-css-prefix}-vine:before { content: map-get($font-awesome, vine); }
+.#{$fa-css-prefix}-codepen:before { content: map-get($font-awesome, codepen); }
+.#{$fa-css-prefix}-jsfiddle:before { content: map-get($font-awesome, jsfiddle); }
+.#{$fa-css-prefix}-life-bouy:before,
+.#{$fa-css-prefix}-life-buoy:before,
+.#{$fa-css-prefix}-life-saver:before,
+.#{$fa-css-prefix}-support:before,
+.#{$fa-css-prefix}-life-ring:before { content: map-get($font-awesome, life-ring); }
+.#{$fa-css-prefix}-circle-o-notch:before { content: map-get($font-awesome, circle-o-notch); }
+.#{$fa-css-prefix}-ra:before,
+.#{$fa-css-prefix}-rebel:before { content: map-get($font-awesome, rebel); }
+.#{$fa-css-prefix}-ge:before,
+.#{$fa-css-prefix}-empire:before { content: map-get($font-awesome, empire); }
+.#{$fa-css-prefix}-git-square:before { content: map-get($font-awesome, git-square); }
+.#{$fa-css-prefix}-git:before { content: map-get($font-awesome, git); }
+.#{$fa-css-prefix}-y-combinator-square:before,
+.#{$fa-css-prefix}-yc-square:before,
+.#{$fa-css-prefix}-hacker-news:before { content: map-get($font-awesome, hacker-news); }
+.#{$fa-css-prefix}-tencent-weibo:before { content: map-get($font-awesome, tencent-weibo); }
+.#{$fa-css-prefix}-qq:before { content: map-get($font-awesome, qq); }
+.#{$fa-css-prefix}-wechat:before,
+.#{$fa-css-prefix}-weixin:before { content: map-get($font-awesome, weixin); }
+.#{$fa-css-prefix}-send:before,
+.#{$fa-css-prefix}-paper-plane:before { content: map-get($font-awesome, paper-plane); }
+.#{$fa-css-prefix}-send-o:before,
+.#{$fa-css-prefix}-paper-plane-o:before { content: map-get($font-awesome, paper-plane-o); }
+.#{$fa-css-prefix}-history:before { content: map-get($font-awesome, history); }
+.#{$fa-css-prefix}-circle-thin:before { content: map-get($font-awesome, circle-thin); }
+.#{$fa-css-prefix}-header:before { content: map-get($font-awesome, header); }
+.#{$fa-css-prefix}-paragraph:before { content: map-get($font-awesome, paragraph); }
+.#{$fa-css-prefix}-sliders:before { content: map-get($font-awesome, sliders); }
+.#{$fa-css-prefix}-share-alt:before { content: map-get($font-awesome, share-alt); }
+.#{$fa-css-prefix}-share-alt-square:before { content: map-get($font-awesome, share-alt-square); }
+.#{$fa-css-prefix}-bomb:before { content: map-get($font-awesome, bomb); }
+.#{$fa-css-prefix}-soccer-ball-o:before,
+.#{$fa-css-prefix}-futbol-o:before { content: map-get($font-awesome, futbol-o); }
+.#{$fa-css-prefix}-tty:before { content: map-get($font-awesome, tty); }
+.#{$fa-css-prefix}-binoculars:before { content: map-get($font-awesome, binoculars); }
+.#{$fa-css-prefix}-plug:before { content: map-get($font-awesome, plug); }
+.#{$fa-css-prefix}-slideshare:before { content: map-get($font-awesome, slideshare); }
+.#{$fa-css-prefix}-twitch:before { content: map-get($font-awesome, twitch); }
+.#{$fa-css-prefix}-yelp:before { content: map-get($font-awesome, yelp); }
+.#{$fa-css-prefix}-newspaper-o:before { content: map-get($font-awesome, newspaper-o); }
+.#{$fa-css-prefix}-wifi:before { content: map-get($font-awesome, wifi); }
+.#{$fa-css-prefix}-calculator:before { content: map-get($font-awesome, calculator); }
+.#{$fa-css-prefix}-paypal:before { content: map-get($font-awesome, paypal); }
+.#{$fa-css-prefix}-google-wallet:before { content: map-get($font-awesome, google-wallet); }
+.#{$fa-css-prefix}-cc-visa:before { content: map-get($font-awesome, cc-visa); }
+.#{$fa-css-prefix}-cc-mastercard:before { content: map-get($font-awesome, cc-mastercard); }
+.#{$fa-css-prefix}-cc-discover:before { content: map-get($font-awesome, cc-discover); }
+.#{$fa-css-prefix}-cc-amex:before { content: map-get($font-awesome, cc-amex); }
+.#{$fa-css-prefix}-cc-paypal:before { content: map-get($font-awesome, cc-paypal); }
+.#{$fa-css-prefix}-cc-stripe:before { content: map-get($font-awesome, cc-stripe); }
+.#{$fa-css-prefix}-bell-slash:before { content: map-get($font-awesome, bell-slash); }
+.#{$fa-css-prefix}-bell-slash-o:before { content: map-get($font-awesome, bell-slash-o); }
+.#{$fa-css-prefix}-trash:before { content: map-get($font-awesome, trash); }
+.#{$fa-css-prefix}-copyright:before { content: map-get($font-awesome, copyright); }
+.#{$fa-css-prefix}-at:before { content: map-get($font-awesome, at); }
+.#{$fa-css-prefix}-eyedropper:before { content: map-get($font-awesome, eyedropper); }
+.#{$fa-css-prefix}-paint-brush:before { content: map-get($font-awesome, paint-brush); }
+.#{$fa-css-prefix}-birthday-cake:before { content: map-get($font-awesome, birthday-cake); }
+.#{$fa-css-prefix}-area-chart:before { content: map-get($font-awesome, area-chart); }
+.#{$fa-css-prefix}-pie-chart:before { content: map-get($font-awesome, pie-chart); }
+.#{$fa-css-prefix}-line-chart:before { content: map-get($font-awesome, line-chart); }
+.#{$fa-css-prefix}-lastfm:before { content: map-get($font-awesome, lastfm); }
+.#{$fa-css-prefix}-lastfm-square:before { content: map-get($font-awesome, lastfm-square); }
+.#{$fa-css-prefix}-toggle-off:before { content: map-get($font-awesome, toggle-off); }
+.#{$fa-css-prefix}-toggle-on:before { content: map-get($font-awesome, toggle-on); }
+.#{$fa-css-prefix}-bicycle:before { content: map-get($font-awesome, bicycle); }
+.#{$fa-css-prefix}-bus:before { content: map-get($font-awesome, bus); }
+.#{$fa-css-prefix}-ioxhost:before { content: map-get($font-awesome, ioxhost); }
+.#{$fa-css-prefix}-angellist:before { content: map-get($font-awesome, angellist); }
+.#{$fa-css-prefix}-cc:before { content: map-get($font-awesome, cc); }
+.#{$fa-css-prefix}-shekel:before,
+.#{$fa-css-prefix}-sheqel:before,
+.#{$fa-css-prefix}-ils:before { content: map-get($font-awesome, ils); }
+.#{$fa-css-prefix}-meanpath:before { content: map-get($font-awesome, meanpath); }
+.#{$fa-css-prefix}-buysellads:before { content: map-get($font-awesome, buysellads); }
+.#{$fa-css-prefix}-connectdevelop:before { content: map-get($font-awesome, connectdevelop); }
+.#{$fa-css-prefix}-dashcube:before { content: map-get($font-awesome, dashcube); }
+.#{$fa-css-prefix}-forumbee:before { content: map-get($font-awesome, forumbee); }
+.#{$fa-css-prefix}-leanpub:before { content: map-get($font-awesome, leanpub); }
+.#{$fa-css-prefix}-sellsy:before { content: map-get($font-awesome, sellsy); }
+.#{$fa-css-prefix}-shirtsinbulk:before { content: map-get($font-awesome, shirtsinbulk); }
+.#{$fa-css-prefix}-simplybuilt:before { content: map-get($font-awesome, simplybuilt); }
+.#{$fa-css-prefix}-skyatlas:before { content: map-get($font-awesome, skyatlas); }
+.#{$fa-css-prefix}-cart-plus:before { content: map-get($font-awesome, cart-plus); }
+.#{$fa-css-prefix}-cart-arrow-down:before { content: map-get($font-awesome, cart-arrow-down); }
+.#{$fa-css-prefix}-diamond:before { content: map-get($font-awesome, diamond); }
+.#{$fa-css-prefix}-ship:before { content: map-get($font-awesome, ship); }
+.#{$fa-css-prefix}-user-secret:before { content: map-get($font-awesome, user-secret); }
+.#{$fa-css-prefix}-motorcycle:before { content: map-get($font-awesome, motorcycle); }
+.#{$fa-css-prefix}-street-view:before { content: map-get($font-awesome, street-view); }
+.#{$fa-css-prefix}-heartbeat:before { content: map-get($font-awesome, heartbeat); }
+.#{$fa-css-prefix}-venus:before { content: map-get($font-awesome, venus); }
+.#{$fa-css-prefix}-mars:before { content: map-get($font-awesome, mars); }
+.#{$fa-css-prefix}-mercury:before { content: map-get($font-awesome, mercury); }
+.#{$fa-css-prefix}-intersex:before,
+.#{$fa-css-prefix}-transgender:before { content: map-get($font-awesome, transgender); }
+.#{$fa-css-prefix}-transgender-alt:before { content: map-get($font-awesome, transgender-alt); }
+.#{$fa-css-prefix}-venus-double:before { content: map-get($font-awesome, venus-double); }
+.#{$fa-css-prefix}-mars-double:before { content: map-get($font-awesome, mars-double); }
+.#{$fa-css-prefix}-venus-mars:before { content: map-get($font-awesome, venus-mars); }
+.#{$fa-css-prefix}-mars-stroke:before { content: map-get($font-awesome, mars-stroke); }
+.#{$fa-css-prefix}-mars-stroke-v:before { content: map-get($font-awesome, mars-stroke-v); }
+.#{$fa-css-prefix}-mars-stroke-h:before { content: map-get($font-awesome, mars-stroke-h); }
+.#{$fa-css-prefix}-neuter:before { content: map-get($font-awesome, neuter); }
+.#{$fa-css-prefix}-genderless:before { content: map-get($font-awesome, genderless); }
+.#{$fa-css-prefix}-facebook-official:before { content: map-get($font-awesome, facebook-official); }
+.#{$fa-css-prefix}-pinterest-p:before { content: map-get($font-awesome, pinterest-p); }
+.#{$fa-css-prefix}-whatsapp:before { content: map-get($font-awesome, whatsapp); }
+.#{$fa-css-prefix}-server:before { content: map-get($font-awesome, server); }
+.#{$fa-css-prefix}-user-plus:before { content: map-get($font-awesome, user-plus); }
+.#{$fa-css-prefix}-user-times:before { content: map-get($font-awesome, user-times); }
+.#{$fa-css-prefix}-hotel:before,
+.#{$fa-css-prefix}-bed:before { content: map-get($font-awesome, bed); }
+.#{$fa-css-prefix}-viacoin:before { content: map-get($font-awesome, viacoin); }
+.#{$fa-css-prefix}-train:before { content: map-get($font-awesome, train); }
+.#{$fa-css-prefix}-subway:before { content: map-get($font-awesome, subway); }
+.#{$fa-css-prefix}-medium:before { content: map-get($font-awesome, medium); }
+.#{$fa-css-prefix}-yc:before,
+.#{$fa-css-prefix}-y-combinator:before { content: map-get($font-awesome, y-combinator); }
+.#{$fa-css-prefix}-optin-monster:before { content: map-get($font-awesome, optin-monster); }
+.#{$fa-css-prefix}-opencart:before { content: map-get($font-awesome, opencart); }
+.#{$fa-css-prefix}-expeditedssl:before { content: map-get($font-awesome, expeditedssl); }
+.#{$fa-css-prefix}-battery-4:before,
+.#{$fa-css-prefix}-battery-full:before { content: map-get($font-awesome, battery-full); }
+.#{$fa-css-prefix}-battery-3:before,
+.#{$fa-css-prefix}-battery-three-quarters:before { content: map-get($font-awesome, battery-three-quarters); }
+.#{$fa-css-prefix}-battery-2:before,
+.#{$fa-css-prefix}-battery-half:before { content: map-get($font-awesome, battery-half); }
+.#{$fa-css-prefix}-battery-1:before,
+.#{$fa-css-prefix}-battery-quarter:before { content: map-get($font-awesome, battery-quarter); }
+.#{$fa-css-prefix}-battery-0:before,
+.#{$fa-css-prefix}-battery-empty:before { content: map-get($font-awesome, battery-empty); }
+.#{$fa-css-prefix}-mouse-pointer:before { content: map-get($font-awesome, mouse-pointer); }
+.#{$fa-css-prefix}-i-cursor:before { content: map-get($font-awesome, i-cursor); }
+.#{$fa-css-prefix}-object-group:before { content: map-get($font-awesome, object-group); }
+.#{$fa-css-prefix}-object-ungroup:before { content: map-get($font-awesome, object-ungroup); }
+.#{$fa-css-prefix}-sticky-note:before { content: map-get($font-awesome, sticky-note); }
+.#{$fa-css-prefix}-sticky-note-o:before { content: map-get($font-awesome, sticky-note-o); }
+.#{$fa-css-prefix}-cc-jcb:before { content: map-get($font-awesome, cc-jcb); }
+.#{$fa-css-prefix}-cc-diners-club:before { content: map-get($font-awesome, cc-diners-club); }
+.#{$fa-css-prefix}-clone:before { content: map-get($font-awesome, clone); }
+.#{$fa-css-prefix}-balance-scale:before { content: map-get($font-awesome, balance-scale); }
+.#{$fa-css-prefix}-hourglass-o:before { content: map-get($font-awesome, hourglass-o); }
+.#{$fa-css-prefix}-hourglass-1:before,
+.#{$fa-css-prefix}-hourglass-start:before { content: map-get($font-awesome, hourglass-start); }
+.#{$fa-css-prefix}-hourglass-2:before,
+.#{$fa-css-prefix}-hourglass-half:before { content: map-get($font-awesome, hourglass-half); }
+.#{$fa-css-prefix}-hourglass-3:before,
+.#{$fa-css-prefix}-hourglass-end:before { content: map-get($font-awesome, hourglass-end); }
+.#{$fa-css-prefix}-hourglass:before { content: map-get($font-awesome, hourglass); }
+.#{$fa-css-prefix}-hand-grab-o:before,
+.#{$fa-css-prefix}-hand-rock-o:before { content: map-get($font-awesome, hand-rock-o); }
+.#{$fa-css-prefix}-hand-stop-o:before,
+.#{$fa-css-prefix}-hand-paper-o:before { content: map-get($font-awesome, hand-paper-o); }
+.#{$fa-css-prefix}-hand-scissors-o:before { content: map-get($font-awesome, hand-scissors-o); }
+.#{$fa-css-prefix}-hand-lizard-o:before { content: map-get($font-awesome, hand-lizard-o); }
+.#{$fa-css-prefix}-hand-spock-o:before { content: map-get($font-awesome, hand-spock-o); }
+.#{$fa-css-prefix}-hand-pointer-o:before { content: map-get($font-awesome, hand-pointer-o); }
+.#{$fa-css-prefix}-hand-peace-o:before { content: map-get($font-awesome, hand-peace-o); }
+.#{$fa-css-prefix}-trademark:before { content: map-get($font-awesome, trademark); }
+.#{$fa-css-prefix}-registered:before { content: map-get($font-awesome, registered); }
+.#{$fa-css-prefix}-creative-commons:before { content: map-get($font-awesome, creative-commons); }
+.#{$fa-css-prefix}-gg:before { content: map-get($font-awesome, gg); }
+.#{$fa-css-prefix}-gg-circle:before { content: map-get($font-awesome, gg-circle); }
+.#{$fa-css-prefix}-tripadvisor:before { content: map-get($font-awesome, tripadvisor); }
+.#{$fa-css-prefix}-odnoklassniki:before { content: map-get($font-awesome, odnoklassniki); }
+.#{$fa-css-prefix}-odnoklassniki-square:before { content: map-get($font-awesome, odnoklassniki-square); }
+.#{$fa-css-prefix}-get-pocket:before { content: map-get($font-awesome, get-pocket); }
+.#{$fa-css-prefix}-wikipedia-w:before { content: map-get($font-awesome, wikipedia-w); }
+.#{$fa-css-prefix}-safari:before { content: map-get($font-awesome, safari); }
+.#{$fa-css-prefix}-chrome:before { content: map-get($font-awesome, chrome); }
+.#{$fa-css-prefix}-firefox:before { content: map-get($font-awesome, firefox); }
+.#{$fa-css-prefix}-opera:before { content: map-get($font-awesome, opera); }
+.#{$fa-css-prefix}-internet-explorer:before { content: map-get($font-awesome, internet-explorer); }
+.#{$fa-css-prefix}-tv:before,
+.#{$fa-css-prefix}-television:before { content: map-get($font-awesome, television); }
+.#{$fa-css-prefix}-contao:before { content: map-get($font-awesome, contao); }
+.#{$fa-css-prefix}-500px:before { content: map-get($font-awesome, 500px); }
+.#{$fa-css-prefix}-amazon:before { content: map-get($font-awesome, amazon); }
+.#{$fa-css-prefix}-calendar-plus-o:before { content: map-get($font-awesome, calendar-plus-o); }
+.#{$fa-css-prefix}-calendar-minus-o:before { content: map-get($font-awesome, calendar-minus-o); }
+.#{$fa-css-prefix}-calendar-times-o:before { content: map-get($font-awesome, calendar-times-o); }
+.#{$fa-css-prefix}-calendar-check-o:before { content: map-get($font-awesome, calendar-check-o); }
+.#{$fa-css-prefix}-industry:before { content: map-get($font-awesome, industry); }
+.#{$fa-css-prefix}-map-pin:before { content: map-get($font-awesome, map-pin); }
+.#{$fa-css-prefix}-map-signs:before { content: map-get($font-awesome, map-signs); }
+.#{$fa-css-prefix}-map-o:before { content: map-get($font-awesome, map-o); }
+.#{$fa-css-prefix}-map:before { content: map-get($font-awesome, map); }
+.#{$fa-css-prefix}-commenting:before { content: map-get($font-awesome, commenting); }
+.#{$fa-css-prefix}-commenting-o:before { content: map-get($font-awesome, commenting-o); }
+.#{$fa-css-prefix}-houzz:before { content: map-get($font-awesome, houzz); }
+.#{$fa-css-prefix}-vimeo:before { content: map-get($font-awesome, vimeo); }
+.#{$fa-css-prefix}-black-tie:before { content: map-get($font-awesome, black-tie); }
+.#{$fa-css-prefix}-fonticons:before { content: map-get($font-awesome, fonticons); }
+.#{$fa-css-prefix}-reddit-alien:before { content: map-get($font-awesome, reddit-alien); }
+.#{$fa-css-prefix}-edge:before { content: map-get($font-awesome, edge); }
+.#{$fa-css-prefix}-credit-card-alt:before { content: map-get($font-awesome, credit-card-alt); }
+.#{$fa-css-prefix}-codiepie:before { content: map-get($font-awesome, codiepie); }
+.#{$fa-css-prefix}-modx:before { content: map-get($font-awesome, modx); }
+.#{$fa-css-prefix}-fort-awesome:before { content: map-get($font-awesome, fort-awesome); }
+.#{$fa-css-prefix}-usb:before { content: map-get($font-awesome, usb); }
+.#{$fa-css-prefix}-product-hunt:before { content: map-get($font-awesome, product-hunt); }
+.#{$fa-css-prefix}-mixcloud:before { content: map-get($font-awesome, mixcloud); }
+.#{$fa-css-prefix}-scribd:before { content: map-get($font-awesome, scribd); }
+.#{$fa-css-prefix}-pause-circle:before { content: map-get($font-awesome, pause-circle); }
+.#{$fa-css-prefix}-pause-circle-o:before { content: map-get($font-awesome, pause-circle-o); }
+.#{$fa-css-prefix}-stop-circle:before { content: map-get($font-awesome, stop-circle); }
+.#{$fa-css-prefix}-stop-circle-o:before { content: map-get($font-awesome, stop-circle-o); }
+.#{$fa-css-prefix}-shopping-bag:before { content: map-get($font-awesome, shopping-bag); }
+.#{$fa-css-prefix}-shopping-basket:before { content: map-get($font-awesome, shopping-basket); }
+.#{$fa-css-prefix}-hashtag:before { content: map-get($font-awesome, hashtag); }
+.#{$fa-css-prefix}-bluetooth:before { content: map-get($font-awesome, bluetooth); }
+.#{$fa-css-prefix}-bluetooth-b:before { content: map-get($font-awesome, bluetooth-b); }
+.#{$fa-css-prefix}-percent:before { content: map-get($font-awesome, percent); }

@@ -1,20 +1,17 @@
 /**
- * FOUNDATION
+ * SETTINGS
  */
-$include-html-grid-classes: false !default;
-$include-xl-html-grid-classes: false !default;
-
-$row-width: rem-calc(1000) !default;
-$opposite-direction: right !default;
-$total-columns: 12 !default;
-$column-gutter: rem-calc(30) !default;
-$default-float: left !default;
-
+$row-width: 1000px !default;
+$rem-base: 16px !default;
 $base-font-size: 100% !default;
 $base-line-height: 1.5 !default;
 
+// 15px padding on default font size
 $padding: .9375em !default;
 $padding-sm: .9375em * .5 !default;
+
+// sticky footer
+$footer-height: 96px;
 
 /**
  * COLORS
@@ -47,3 +44,9 @@ $heading: $sans;
  */
 
 $adminbar: 32px;
+
+/**
+ * PSEUDO MEDIA QUERIES
+ */
+
+$medium: 600px;

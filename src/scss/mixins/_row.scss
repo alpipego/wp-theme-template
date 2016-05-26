@@ -1,0 +1,8 @@
+@mixin row() {
+  width: 100%;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  max-width: rem-calc($row-width);
+}

@@ -1,0 +1,5 @@
+// can be extended, creating maps of other icon fonts
+@mixin icon($class, $fontFamily: FontAwesome, $map: $font-awesome) {
+    content: map-get-strict($map, $class);
+    font-family: $fontFamily;
+}
