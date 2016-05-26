@@ -2,7 +2,7 @@
 
 add_action('wp_enqueue_scripts', function() {
     $js = get_stylesheet_directory_uri() . '/js/';
-    wp_register_script('app', $js . 'app.min.js', ['jquery'], '', false);
+    wp_register_script('app', $js . 'app.min.js', ['jquery'], '', true);
 
     wp_enqueue_script([
             'app',
@@ -34,7 +34,5 @@ add_action('wp_enqueue_scripts', function() {
     $css = get_stylesheet_directory_uri() . '/css/';
     wp_register_style('app', $css . 'app.css');
 
-    wp_enqueue_style([
-        'app'
-    ]);
+    wp_enqueue_style('app');
 });
