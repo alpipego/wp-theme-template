@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/alpipego/wp-theme-template.git"
   },
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": true,
   "devDependencies": {
     "autoprefixer": "^6.3.6",
