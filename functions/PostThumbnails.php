@@ -1,12 +1,12 @@
 <?php
 
-add_theme_support('post-thumbnails');
+add_theme_support( 'post-thumbnails' );
 
 // remove default sizes
-add_filter('intermediate_image_sizes_advanced', function($sizes) {
-    unset($sizes['thumbnail']);
-    unset($sizes['medium']);
-    unset($sizes['large']);
+add_filter( 'intermediate_image_sizes_advanced', function ( $sizes ) {
+	unset( $sizes['thumbnail'] );
+	unset( $sizes['medium'] );
+	unset( $sizes['large'] );
 
-    return $sizes;
-});
+	return $sizes;
+} );

@@ -3,7 +3,7 @@
 add_action( 'wp_enqueue_scripts', function () {
 	$js = get_stylesheet_directory_uri() . '/js/';
 	wp_register_script( 'app', $js . 'app.min.js', [ 'jquery' ], '1.0.0', true );
-	wp_register_script( 'modernizr', $js . 'modernizr.min.js', [], '1.1.0', true );
+	wp_register_script( 'modernizr', $js . 'modernizr.min.js', [ ], '1.1.0', true );
 
 	wp_enqueue_script( [
 			'app',
