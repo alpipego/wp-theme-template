@@ -117,7 +117,7 @@ module.exports = function(grunt) {
     pot: {
       default: {
         options: {
-          text_domain: 'theme',
+          text_domain: 'wp-theme-template',
           dest: 'languages/',
           language: 'PHP',
           encoding: 'utf-8',
@@ -149,7 +149,7 @@ module.exports = function(grunt) {
     watch: {
       grunt: {
         files: ['Gruntfile.js'],
-        tasks: ['styles', 'js']
+        tasks: ['styles', 'js', 'modernizr']
       },
       sass: {
         files: 'src/scss/**/*.scss',
@@ -162,8 +162,8 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', ['sass', 'postcss:dist', 'js']);
   grunt.registerTask('styles', ['sass', 'postcss:default']);
   grunt.registerTask('js', ['concat', 'uglify']);
-  grunt.registerTask('default', ['styles', 'js', 'watch']);
+  grunt.registerTask('default', ['styles', 'js', 'watch', 'modernizr']);
+  grunt.registerTask('build', ['sass', 'postcss:dist', 'js', 'pot', 'modernizr']);
 };
