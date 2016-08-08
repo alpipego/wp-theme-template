@@ -104,7 +104,7 @@ img {
 
 
 a {
-    @include transition-duration(.2s);
+    transition-duration: .2s;
     text-decoration: none;
     color: $dark;
     outline: 0;
