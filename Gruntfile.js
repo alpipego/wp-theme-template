@@ -117,7 +117,7 @@ module.exports = function(grunt) {
     pot: {
       default: {
         options: {
-          text_domain: 'theme',
+          text_domain: 'wp-theme-template',
           dest: 'languages/',
           language: 'PHP',
           encoding: 'utf-8',
