@@ -4,3 +4,6 @@ src/ export-ignore
 .gitattributes export-ignore
 package.json export-ignore
 Gruntfile.js export-ignore
+composer.json export-ignore
+VERSION export-ignore
+

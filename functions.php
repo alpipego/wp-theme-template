@@ -41,13 +41,13 @@ include 'functions/Excerpt.php';
 /**
  * print template in footer
  */
-add_action('wp_footer', function() {
-    global $template;
+add_action( 'wp_footer', function () {
+	global $template;
 
-    if (isset($_GET['template']) && $_GET['template']) {
-        print_r( $template );
-    }
-});
+	if ( isset( $_GET['template'] ) && $_GET['template'] ) {
+		print_r( $template );
+	}
+} );
 
 /**
  * Add meta information to head

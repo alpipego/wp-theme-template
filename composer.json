@@ -1,0 +1,13 @@
+{
+    "name": "alpipego/wp-theme-template",
+    "description": "WordPress Theme Blueprint",
+    "type": "project",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "alpipego",
+            "email": "alpipego@gmail.com"
+        }
+    ],
+    "require": {}
+}
