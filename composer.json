@@ -9,5 +9,10 @@
             "email": "alpipego@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "scripts": {
+        "post-root-package-install": [
+            "echo 'composer.json export-ignore\npackage.json export-ignore\nGruntfile.js export-ignore\nsrc/ export-ignore\n.gitignore export-ignore\n.gitattributes export-ignore' >> .gitattributes"
+        ]
+    }
 }
